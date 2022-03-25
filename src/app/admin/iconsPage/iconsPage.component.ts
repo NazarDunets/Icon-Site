@@ -156,11 +156,11 @@ export class AdminIconsPageComponent {
           fontVersion: this.selectedFontVersion
         });
 
-        // TODO: Currently need a second for the back-end to catch up.
+        // TODO: Currently need a few seconds for the back-end to catch up.
         // We should probably find a better way of doing this in the future.
         setTimeout(() => {
           this.selectIcon(newIcon.id);
-        }, 1000);       
+        }, 5000);       
       } catch (ee) {
         alert('Failed to add icon... not sure why.');
       }
