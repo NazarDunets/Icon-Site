@@ -112,6 +112,12 @@ export class AdminIconsPageComponent {
   }
 
   async selectIcon(iconId) {
+
+    console.log('SELECT ICON =>', {
+      iconId,
+      selectedIcon: this.selectedIcon?.id
+    });
+
     this.loading = true;
     const selectedIcon = iconId || this.selectedIcon.id;
     this.icon = await this.iconService.getAdminIcon(selectedIcon);
@@ -161,8 +167,8 @@ export class AdminIconsPageComponent {
         // TODO: Switch to Edit mode immediately after adding a new icon.
         // The API currently caches every 5 minutes, so this doesn't work
         // until we can relax the cache for this specific endpoint call.
-        // this.selectIcon(newIcon.id);
-        this.cancelIcon();
+        // this.cancelIcon();
+        this.selectIcon(newIcon.id);
       } catch (ee) {
         alert('Failed to add icon... not sure why.');
       }
