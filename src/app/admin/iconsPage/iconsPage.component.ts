@@ -174,6 +174,21 @@ export class AdminIconsPageComponent {
     this.issue = null;
   }
 
+  autofillDescription() {
+    const currentName = this.newIcon?.name?.trim();
+    const currentDesc = this.newIcon?.description?.trim();
+    if (currentDesc || !currentName) {
+      return;
+    }
+
+    const readableName = currentName
+      .split('-')
+      .map((frag) => `${frag.charAt(0).toUpperCase()}${frag.slice(1)}`)
+      .join(' ');
+
+    this.newIcon.description = `${readableName}.`;
+  }
+
   async updateDescription() {
     this.icon = await this.iconService.updateDescription(this.editIcon, this.selectedUser);
     this.editIcon = new Icon().from(this.icon);

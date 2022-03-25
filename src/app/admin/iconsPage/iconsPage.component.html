@@ -310,7 +310,9 @@
                 <label>Name</label>
                 <input class="form-control" name="name"
                   #newIconName="ngModel"
-                  [(ngModel)]="newIcon.name"/>
+                  [(ngModel)]="newIcon.name"
+                  (focusout)="autofillDescription()"
+                />
                 <div class="alert alert-danger mt-2"
                   *ngIf="!newIcon.validName()">Name format invalid.</div>
               </div>
