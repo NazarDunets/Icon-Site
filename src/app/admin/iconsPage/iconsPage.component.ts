@@ -158,8 +158,9 @@ export class AdminIconsPageComponent {
 
         // TODO: Currently need a second for the back-end to catch up.
         // We should probably find a better way of doing this in the future.
-        await new Promise((s) => setTimeout(s, 1000));
-        this.selectIcon(newIcon.id);
+        setTimeout(() => {
+          this.selectIcon(newIcon.id);
+        }, 1000);       
       } catch (ee) {
         alert('Failed to add icon... not sure why.');
       }
