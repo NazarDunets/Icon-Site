@@ -69,7 +69,7 @@ export class AdminIconsPageComponent {
   public loading: boolean = true;
   public baseIcon: Icon = null;
   public issue: string = null;
-  private noIcon = 'M0,0H24V24H0V0M2,2V22H22V2H2M11,5H13V15H11V5M11,17H13V19H11V17Z';
+  private noIcon = 'M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M13,7H11V11H7V13H11V17H13V13H17V11H13V7Z';
 
   async ngOnInit() {
     await this.loginService.isAuthed();
@@ -111,15 +111,18 @@ export class AdminIconsPageComponent {
 
   }
 
-  async selectIcon() {
+  async selectIcon(iconId) {
     this.loading = true;
-    this.icon = await this.iconService.getAdminIcon(this.selectedIcon.id);
+    const selectedIcon = iconId || this.selectedIcon.id;
+    this.icon = await this.iconService.getAdminIcon(selectedIcon);
     this.editIcon = new Icon().from(this.icon);
+
     if (this.icon.baseIconId) {
       this.baseIcon = await this.iconService.getAdminIcon(this.icon.baseIconId);
     } else {
       this.baseIcon = null;
     }
+
     this.loading = false;
     this.newIcon = null;
     this.loadFonts();
@@ -148,11 +151,11 @@ export class AdminIconsPageComponent {
       alert('Icon name already exists!');
     } catch (e) {
       try {
-        await this.iconService.addIcon(this.newIcon, this.selectedUser, {
+        const newIcon = await this.iconService.addIcon(this.newIcon, this.selectedUser, {
           issue: this.issue,
           fontVersion: this.selectedFontVersion
         });
-        this.cancelIcon();
+        this.selectIcon(newIcon.id);
       } catch (ee) {
         alert('Failed to add icon... not sure why.');
       }
@@ -172,6 +175,21 @@ export class AdminIconsPageComponent {
   cancelIcon() {
     this.newIcon = null;
     this.issue = null;
+  }
+
+  autofillDescription() {
+    const currentName = this.newIcon?.name?.trim();
+    const currentDesc = this.newIcon?.description?.trim();
+    if (currentDesc || !currentName) {
+      return;
+    }
+
+    const readableName = currentName
+      .split('-')
+      .map((frag) => `${frag.charAt(0).toUpperCase()}${frag.slice(1)}`)
+      .join(' ');
+
+    this.newIcon.description = `${readableName}.`;
   }
 
   async updateDescription() {
