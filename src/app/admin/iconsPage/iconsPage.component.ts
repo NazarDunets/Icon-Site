@@ -111,15 +111,18 @@ export class AdminIconsPageComponent {
 
   }
 
-  async selectIcon() {
+  async selectIcon(iconId) {
     this.loading = true;
-    this.icon = await this.iconService.getAdminIcon(this.selectedIcon.id);
+    const selectedIcon = iconId || this.selectedIcon.id;
+    this.icon = await this.iconService.getAdminIcon(selectedIcon);
     this.editIcon = new Icon().from(this.icon);
+
     if (this.icon.baseIconId) {
       this.baseIcon = await this.iconService.getAdminIcon(this.icon.baseIconId);
     } else {
       this.baseIcon = null;
     }
+
     this.loading = false;
     this.newIcon = null;
     this.loadFonts();
@@ -148,11 +151,11 @@ export class AdminIconsPageComponent {
       alert('Icon name already exists!');
     } catch (e) {
       try {
-        await this.iconService.addIcon(this.newIcon, this.selectedUser, {
+        const newIcon = await this.iconService.addIcon(this.newIcon, this.selectedUser, {
           issue: this.issue,
           fontVersion: this.selectedFontVersion
         });
-        this.cancelIcon();
+        this.selectIcon(newIcon.id);
       } catch (ee) {
         alert('Failed to add icon... not sure why.');
       }
