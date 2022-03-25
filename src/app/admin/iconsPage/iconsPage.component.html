@@ -309,8 +309,13 @@
           <div class="col-md-9">
             <div class="form-group form-group-edit">
               <label>Path Data</label>
-              <textarea class="form-control" name="data" rows="3"
-                [(ngModel)]="editIcon.data"></textarea>
+              <textarea
+                class="form-control"
+                name="data"
+                rows="3"
+                [(ngModel)]="editIcon.data"
+                (click)="$event.target.select()"
+              ></textarea>
               <div>
                 <span class="mr-3"><span [innerText]="editIcon.getPointCount()"></span> Points</span>
                 <button class="btn btn-outline-primary mr-2"
@@ -435,8 +440,13 @@
             <div class="col-md-4">
               <div class="form-group">
                 <label>Path Data</label>
-                <textarea class="form-control" [(ngModel)]="newIcon.data" rows="4"
-                  (change)="pathChange()"></textarea>
+                <textarea
+                  class="form-control"
+                  [(ngModel)]="newIcon.data"
+                  rows="4"
+                  (change)="pathChange()"
+                  (click)="$event.target.select()"
+                ></textarea>
                 <!-- <div class="alert alert-danger mt-2">Invalid path data.</div> -->
               </div>
             </div>
