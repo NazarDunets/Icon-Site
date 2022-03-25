@@ -115,7 +115,7 @@ export class AdminIconsPageComponent {
 
     console.log('SELECT ICON =>', {
       iconId,
-      selectedIcon: this.selectedIcon.id
+      selectedIcon: this.selectedIcon?.id
     });
 
     this.loading = true;
