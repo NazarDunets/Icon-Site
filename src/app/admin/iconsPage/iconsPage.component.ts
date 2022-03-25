@@ -156,11 +156,11 @@ export class AdminIconsPageComponent {
           fontVersion: this.selectedFontVersion
         });
 
-        // TODO: Currently need a few seconds for the back-end to catch up.
-        // We should probably find a better way of doing this in the future.
-        setTimeout(() => {
-          this.selectIcon(newIcon.id);
-        }, 5000);       
+        // TODO: Switch to Edit mode immediately after adding a new icon.
+        // The API currently caches every 5 minutes, so this doesn't work
+        // until we can relax the cache for this specific endpoint call.
+        // this.selectIcon(newIcon.id);
+        this.cancelIcon();
       } catch (ee) {
         alert('Failed to add icon... not sure why.');
       }
