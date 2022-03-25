@@ -111,16 +111,11 @@ export class AdminIconsPageComponent {
 
   }
 
-  async selectIcon(iconId) {
-
-    console.log('SELECT ICON =>', {
-      iconId,
-      selectedIcon: this.selectedIcon?.id
-    });
+  async selectIcon() {
+    console.log('SELECT ICON =>', this.selectedIcon);
 
     this.loading = true;
-    const selectedIcon = iconId || this.selectedIcon.id;
-    this.icon = await this.iconService.getAdminIcon(selectedIcon);
+    this.icon = await this.iconService.getAdminIcon(this.selectedIcon.id);
     this.editIcon = new Icon().from(this.icon);
 
     if (this.icon.baseIconId) {
@@ -168,7 +163,8 @@ export class AdminIconsPageComponent {
         // The API currently caches every 5 minutes, so this doesn't work
         // until we can relax the cache for this specific endpoint call.
         // this.cancelIcon();
-        await this.selectIcon(newIcon.id);
+        this.selectedIcon = newIcon;
+        await this.selectIcon();
       } catch (ee) {
         alert('Failed to add icon... not sure why.');
       }
