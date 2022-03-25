@@ -156,6 +156,8 @@ export class AdminIconsPageComponent {
           fontVersion: this.selectedFontVersion
         });
 
+        console.log(newIcon);
+
         // TODO: Switch to Edit mode immediately after adding a new icon.
         // The API currently caches every 5 minutes, so this doesn't work
         // until we can relax the cache for this specific endpoint call.
