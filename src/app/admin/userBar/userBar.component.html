@@ -6,10 +6,11 @@
     </a>
   </div>
   <div
+    *ngIf="user"
     [ngClass]="{'col-md-8': showBack, 'col-md-12': !showBack}" 
     class="d-flex justify-content-end align-items-center"
   >
-      <p class="m-0">{{user?.name || user.github}}</p>
+      <p class="m-0">{{user?.name || user?.github}}</p>
       <img
           *ngIf="user.base64"
           [src]="user.base64"
