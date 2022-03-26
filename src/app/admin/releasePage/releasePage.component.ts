@@ -56,10 +56,6 @@ export class AdminReleasePageComponent {
     this.router.navigateByUrl('/admin/index')
   }
 
-  async logout() {
-    await this.loginService.logout();
-  }
-
   tags: Tag[] = [];
 
   selectedTag: Tag;

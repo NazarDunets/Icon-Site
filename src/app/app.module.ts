@@ -30,6 +30,7 @@ import { ContributorsPageComponent } from './contributorsPage/contributorsPage.c
 import { IconPageComponent } from './iconPage/iconPage.component';
 import { IconsPageComponent } from './iconsPage/iconsPage.component';
 import { DownloadPageComponent } from './downloadPage/downloadPage.component';
+import { AdminUserBarComponent } from './admin/userBar/userBar.component';
 import { AdminIconsPageComponent } from './admin/iconsPage/iconsPage.component';
 import { AdminIndexPageComponent } from './admin/indexPage/indexPage.component';
 import { ViewerPageComponent } from './viewerPage/viewerPage.component';
@@ -518,6 +519,7 @@ const appRoutes: Routes = [
     HistoryPageComponent,
     IssuesPageComponent,
     GithubPageComponent,
+    AdminUserBarComponent,
     AdminSheetPageComponent,
     AdminBasePageComponent,
     AdminLoginPageComponent,

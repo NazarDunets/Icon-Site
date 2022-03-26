@@ -85,10 +85,6 @@ export class AdminIconsPageComponent {
     this.router.navigateByUrl('/admin/index');
   }
 
-  async logout() {
-    await this.loginService.logout();
-  }
-
   async selectPackage() {
     // User Select
     this.users = await this.userService.getAdminUsers(this.selectedPackage.id);

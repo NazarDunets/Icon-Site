@@ -1,0 +1,21 @@
+<div class="row mb-2 user-bar">
+  <div *ngIf="showBack" class="col-md-4">
+    <a class="btn btn-primary btn-sm" (click)="goBack()">
+      <svg width="24" height="24" viewBox="0 0 24 24" style="fill:currentColor;"><path d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z" /></svg>
+      Return to Menu
+    </a>
+  </div>
+  <div
+    [ngClass]="{'col-md-8': showBack, 'col-md-12': !showBack}" 
+    class="d-flex justify-content-end align-items-center"
+  >
+      <p class="m-0">{{user?.name || user.github}}</p>
+      <img
+          *ngIf="user.base64"
+          [src]="user.base64"
+          [alt]="user?.name || user.github"
+      />
+      <a class="btn btn-primary btn-sm" routerLink="/admin/profile">Profile</a>
+      <a class="btn btn-primary btn-sm" (click)="logout()">Logout</a>
+  </div>
+</div>

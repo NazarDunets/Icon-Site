@@ -1,14 +1,12 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { LoginService } from 'app/admin/services/login.service';
 import { Package } from 'app/shared/models/package.model';
 import { IconService } from 'app/shared/icon.service';
 import { Icon } from 'app/shared/models/icon.model';
-import { Observable } from 'rxjs';
 import { Alias } from 'app/shared/models/alias.model';
 import { Modification } from 'app/shared/models/modification.model';
 import { ModificationService } from 'app/shared/modification.service';
 import { ModificationType } from 'app/shared/enums/modificationType.enum';
-import { Router } from '@angular/router';
 import { PackageType } from 'app/shared/enums/packageType.enum';
 
 @Component({
@@ -35,8 +33,7 @@ export class AdminAliasPageComponent {
   constructor(
     private loginService: LoginService,
     private iconService: IconService,
-    private modificationService: ModificationService,
-    private router: Router
+    private modificationService: ModificationService
   ) {
     this.packages.push(new Package(PackageType.MaterialDesignIcons, "Material Design Icons"));
     this.packages.push(new Package(PackageType.MaterialDesignIconsLight, "Material Design Icons Light"));
@@ -49,14 +46,6 @@ export class AdminAliasPageComponent {
     console.log('authed');
     // Load Package
     this.selectPackage();
-  }
-
-  goBack () {
-    this.router.navigateByUrl('/admin/index')
-  }
-
-  async logout () {
-    await this.loginService.logout();
   }
 
   async selectPackage() {

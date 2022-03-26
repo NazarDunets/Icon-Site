@@ -1,23 +1,16 @@
 <mdi-banner title="Icon Management" [carbon]="false"></mdi-banner>
 <div class="container">
+    <mdi-admin-user-bar></mdi-admin-user-bar>
     <div class="card p-3">
-        <div class="row mb-2">
-            <div class="col-md-8">
-                <p>Hello contributor! Please select from the list of features below.</p>
-            </div>
-            <div class="col-md-4 text-right">
-                <button class="btn btn-primary" (click)="logout()">Logout</button>
-            </div>
-        </div>
         <table class="table">
             <tr>
-                <th>Feature</th>
-                <th>Description</th>
-                <th></th>
+                <th class="border-top-0">Feature</th>
+                <th class="border-top-0">Description</th>
+                <th class="border-top-0"></th>
             </tr>
             <tr>
                 <td>Icons</td>
-                <td><p>Add / Edit Icons</p></td>
+                <td><p>Add / Edit Icons.</p></td>
                 <td class="text-right"><a class="btn btn-primary btn-sm" routerLink="/admin/icons">View</a></td>
             </tr>
             <tr>
@@ -49,11 +42,6 @@
                 <th>Other Feature</th>
                 <th>Description</th>
                 <th></th>
-            </tr>
-            <tr>
-                <td>Profile</td>
-                <td><p>Edit profile information.</p></td>
-                <td class="text-right"><a class="btn btn-primary btn-sm" routerLink="/admin/profile">View</a></td>
             </tr>
             <tr>
                 <td>Site</td>

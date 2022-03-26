@@ -1,15 +1,6 @@
 <mdi-banner title="Manage Tags" [carbon]="false"></mdi-banner>
 <div class="container-fluid">
-  <div class="row mb-2">
-    <div class="col-md-8">
-      <p>As a contributor you can submit tags to be included instantly and approve community suggestion on the
-          right.</p>
-    </div>
-    <div class="col-md-4 text-right">
-      <button class="btn btn-primary mr-2" (click)="goBack()">Go Back</button>
-      <button class="btn btn-primary" (click)="logout()">Logout</button>
-    </div>
-  </div>
+  <mdi-admin-user-bar [showBack]="true"></mdi-admin-user-bar>
   <div class="row">
     <div class="col-md-6">
       <div class="card p-3">

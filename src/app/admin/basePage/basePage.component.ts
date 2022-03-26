@@ -13,7 +13,6 @@ import { IconService } from 'app/shared/icon.service';
   ]
 })
 export class AdminBasePageComponent {
-
   constructor(
     private iconService: IconService,
     private route: ActivatedRoute
@@ -56,5 +55,4 @@ export class AdminBasePageComponent {
   async ngOnInit() {
     await this.selectPackage();
   }
-
 }

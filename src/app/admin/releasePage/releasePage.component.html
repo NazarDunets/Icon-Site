@@ -1,13 +1,10 @@
 <mdi-banner title="Release Management" [carbon]="false"></mdi-banner>
 <div class="container-fluid">
+  <mdi-admin-user-bar [showBack]="true"></mdi-admin-user-bar>
   <div class="card p-3">
     <div class="row mb-2">
-      <div class="col-md-8">
+      <div class="col-md-12">
         <p>If you do not know what this page is for then do not touch anything! Many of these operations are <em>very</em> CPU intensive and will slow down the production site.</p>
-      </div>
-      <div class="col-md-4 text-right">
-        <button class="btn btn-primary mr-2" (click)="goBack()">Go Back</button>
-        <button class="btn btn-primary" (click)="logout()">Logout</button>
       </div>
     </div>
     <div class="row">
