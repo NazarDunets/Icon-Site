@@ -73,7 +73,7 @@ export class AdminBasePageComponent {
   
         const oldBaseIcon = this.baseIcons.findIndex((icon) => icon.id === sourceIcon.baseIconId);
         if (this.baseIcons[oldBaseIcon].icons.length === 1) {
-          this.baseIcons.splice(oldBaseIcon, oldBaseIcon);
+          this.baseIcons.splice(oldBaseIcon, 1);
         } else {
           this.baseIcons[oldBaseIcon].icons = this.baseIcons[oldBaseIcon].icons.filter((icon) => icon.id !== sourceIcon.id);
         }
