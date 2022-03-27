@@ -20,7 +20,12 @@
               <path [attr.d]="baseIcon.icon.data" fill="#222"/>
             </svg>
             <span *ngFor="let icon of baseIcon.icons" [attr.title]="icon.name">
-            <svg viewBox="0 0 24 24" style="width: 1.5rem;height: 1.5rem;margin-right: 0.1rem">
+            <svg
+              class="reassignable"
+              viewBox="0 0 24 24"
+              style="width: 1.5rem;height: 1.5rem;margin-right: 0.1rem"
+              (click)="setBaseIcon(icon)"
+            >
               <path [attr.d]="icon.data" fill="#777"/>
             </svg>
             </span>
