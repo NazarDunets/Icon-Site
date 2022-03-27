@@ -16,18 +16,20 @@
       <div *ngIf="baseIcons.length > 0">
         <div class="card" *ngFor="let baseIcon of baseIcons">
           <div class="card-body p-2" *ngIf="baseIcon.icon">
-            <svg viewBox="0 0 24 24" style="width: 1.5rem;height: 1.5rem;margin-right: 0.1rem">
-              <path [attr.d]="baseIcon.icon.data" fill="#222"/>
-            </svg>
+            <span [attr.title]="baseIcon.icon.name">
+              <svg viewBox="0 0 24 24" style="width: 1.5rem;height: 1.5rem;margin-right: 0.1rem">
+                <path [attr.d]="baseIcon.icon.data" fill="#222"/>
+              </svg>
+            </span>
             <span *ngFor="let icon of baseIcon.icons" [attr.title]="icon.name">
-            <svg
-              class="reassignable"
-              viewBox="0 0 24 24"
-              style="width: 1.5rem;height: 1.5rem;margin-right: 0.1rem"
-              (click)="setBaseIcon(icon)"
-            >
-              <path [attr.d]="icon.data" fill="#777"/>
-            </svg>
+              <svg
+                class="reassignable"
+                viewBox="0 0 24 24"
+                style="width: 1.5rem;height: 1.5rem;margin-right: 0.1rem"
+                (click)="setBaseIcon(icon)"
+              >
+                <path [attr.d]="icon.data" fill="#777"/>
+              </svg>
             </span>
           </div>
           <div class="card-body p-2" *ngIf="!baseIcon.icon">
