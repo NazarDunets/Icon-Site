@@ -1,5 +1,66 @@
 # Changelog
 
+
+## Version 6.6.96
+
+- 100 New Icons
+- Updated
+  - `barrel`
+  - `bell-badge-outline`
+  - `bug-check-outline`
+  - `bug-check`
+  - `content-save-alert-outline`
+  - `content-save-alert`
+  - `currency-btc`
+  - `currency-cny`
+  - `currency-eur-off`
+  - `currency-eur`
+  - `currency-gbp`
+  - `currency-jpy`
+  - `currency-rub`
+  - `currency-rupee`
+  - `currency-try`
+  - `fax`
+  - `fedora`
+  - `file-alert-outline`
+  - `file-alert`
+  - `file-check-outline`
+  - `file-check`
+  - `file-lock-outline`
+  - `file-lock`
+  - `file-plus-outline`
+  - `file-plus`
+  - `file-remove-outline`
+  - `file-remove`
+  - `folder-lock-open`
+  - `folder-lock`
+  - `home-battery-outline`
+  - `home-battery`
+  - `home-edit-outline`
+  - `home-export-outline`
+  - `home-flood`
+  - `home-import-outline`
+  - `home-lightbulb-outline`
+  - `home-minus-outline`
+  - `home-minus`
+  - `home-outline`
+  - `home-plus-outline`
+  - `home-outline`
+  - `home-plus-outline`
+  - `home-plus`
+  - `home-remove-outline`
+  - `home-remove`
+  - `home-thermometer-outline`
+  - `home-thermometer`
+  - `karate`
+  - `light-switch`
+  - `propane-tank-outline`
+  - `propane-tank`
+  - `sort-variant-lock-open`
+  - `sort-variant-lock`
+  - `sun-thermometer-outline`
+  - `sun-thermometer`
+
 ## Version 6.5.95
 
 - 100 New Icons
