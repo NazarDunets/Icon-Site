@@ -38,14 +38,6 @@ export class AdminProfilePageComponent {
     this.loadUser();
   }
 
-  goBack () {
-    this.router.navigateByUrl('/admin/index')
-  }
-
-  async logout () {
-    await this.loginService.logout();
-  }
-
   async loadUser() {
     this.editUser = await this.userService.getAdminProfile();
   }

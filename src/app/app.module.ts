@@ -40,6 +40,7 @@ import { NotFoundPageComponent } from './notFoundPage/notFoundPage.component';
 import { MarkdownComponent } from "app/shared/markdown/markdown.component";
 import { AdminAliasPageComponent } from 'app/admin/aliasPage/aliasPage.component';
 import { AdminProfilePageComponent } from 'app/admin/profilePage/profilePage.component';
+import { AdminUsersPageComponent } from 'app/admin/usersPage/usersPage.component';
 import { IssuesPageComponent } from 'app/issuesPage/issuesPage.component';
 import { AdminSheetPageComponent } from 'app/admin/sheetPage/sheetPage.component';
 import { AdminBasePageComponent } from 'app/admin/basePage/basePage.component';
@@ -499,6 +500,10 @@ const appRoutes: Routes = [
     path: 'admin/base',
     component: AdminBasePageComponent
   },
+  {
+    path: 'admin/users',
+    component: AdminUsersPageComponent
+  },
   { path: '**', component: NotFoundPageComponent }
 ];
 
@@ -527,6 +532,7 @@ const appRoutes: Routes = [
     AdminIndexPageComponent,
     AdminAliasPageComponent,
     AdminProfilePageComponent,
+    AdminUsersPageComponent,
     AdminTagPageComponent,
     AdminIndexeddbPageComponent,
     AdminReleasePageComponent,
