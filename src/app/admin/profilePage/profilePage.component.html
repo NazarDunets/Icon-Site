@@ -37,7 +37,7 @@
             <label>
               Website
             </label>
-            <input type="url" name="website" [(ngModel)]="editUser.website" class="form-control" />
+            <input type="url" name="website" placeholder="https://example.com" [(ngModel)]="editUser.website" class="form-control" />
           </div>
           <button class="btn btn-primary" (click)="submitProfile()">Update Profile</button>
         </form>
@@ -57,7 +57,7 @@
         </div>
         <div class="card p-3 mt-3">
           <h2>Disclaimer</h2>
-          <p>For privacy reasons we do not sync GitHub profile information.</p>
+          <p>For privacy reasons, we do not sync GitHub profile information.</p>
         </div>
     </div>
   </div>

@@ -12,7 +12,7 @@
     >
       <div class="col-md-12 d-flex justify-content-end align-items-center">
         <button
-          class="btn btn-outline-success"
+          class="btn btn-primary"
           (click)="addUser()"
         >
           <mdi-icon name="account-plus"></mdi-icon>
@@ -35,7 +35,7 @@
                 [href]="'https://github.com/' + u.github"
                 target="_blank"
               >
-                {{u.github}}
+                {{u.github}} <mdi-icon name="open-in-new" size=".5"></mdi-icon>
               </a>
             </td>
             <td class="align-middle">{{u.name}}</td>
@@ -85,14 +85,12 @@
           <input type="url" placeholder="https://example.com" id="website" name="website" [(ngModel)]="selectedUser.website" class="form-control" />
         </div>
         <div class="row mb-2">
-          <div class="col-md-4">
-            <button type="button" class="btn btn-outline-danger" (click)="clearSelectedUser()">
+          <div class="col-md-12 d-flex justify-content-end align-items-center">
+            <button type="button" class="btn btn-outline-secondary mr-3" (click)="clearSelectedUser()">
               <mdi-icon name="close"></mdi-icon>
               Cancel
             </button>
-          </div>
-          <div class="col-md-8 d-flex justify-content-end align-items-center">
-            <button type="submit" class="btn btn-success" (click)="saveUser()">
+            <button type="submit" class="btn btn-primary" (click)="saveUser()">
               <mdi-icon [name]="selectedUser?.id ? 'content-save' : 'check'"></mdi-icon>
               {{ selectedUser?.id ? 'Save Changes' : 'Add User' }}
             </button>
