@@ -7,6 +7,20 @@
         <p>Please ask on Slack if you are unsure about modifying or adding an icon.</p>
       </div>
     </div>
+    <div class="card mb-3 border-success" *ngIf="iconAddSuccess">
+      <div class="card-header text-white bg-success">
+        Icon added successfully!
+      </div>
+      <div class="card-body">
+        <p>Please fill out the metadata for the new icon below.</p>
+        <p class="mb-0">
+          <button class="btn btn-primary" tabindex="-1" (click)="copyGitHubPreviewToClipboard()">
+            <mdi-icon name="content-copy"></mdi-icon>
+            Copy GitHub Preview
+          </button>
+        </p>
+      </div>
+    </div>
     <div class="row mb-3">
       <div class="col-md-1">
         <span class="step">Step 1</span>

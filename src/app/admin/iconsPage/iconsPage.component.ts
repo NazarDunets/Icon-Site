@@ -65,6 +65,7 @@ export class AdminIconsPageComponent {
   public icon: Icon = null;
   public newIcon: Icon = null;
   public editIcon: Icon = null;
+  public iconAddSuccess: boolean = false;
   public styles: Style[] = null;
   public loading: boolean = true;
   public baseIcon: Icon = null;
@@ -126,6 +127,7 @@ export class AdminIconsPageComponent {
   async addIcon() {
     this.editIcon = null;
     this.selectedIcon = null;
+    this.iconAddSuccess = false;
     this.newIcon = new Icon("", this.noIcon);
     this.newIcon.packageId = this.selectedPackage.id;
     this.newIcon.published = true;
@@ -151,11 +153,29 @@ export class AdminIconsPageComponent {
           fontVersion: this.selectedFontVersion
         });
 
+        this.cancelIcon();
         this.selectedIcon = newIcon;
+        this.iconAddSuccess = true;
         await this.selectIcon();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
       } catch (ee) {
         alert('Failed to add icon... not sure why.');
       }
+    }
+  }
+
+  async copyGitHubPreviewToClipboard() {
+    const { name } = this?.selectedIcon;
+
+    if (!name) {
+      return;
+    }
+
+    const previewString = `[![${name}](https://materialdesignicons.com/icon/${name})](https://materialdesignicons.com/icon/${name})`;
+    try {
+      await navigator.clipboard.writeText(previewString);
+    } catch (e) {
+      alert('Could not copy preview to clipboard.');
     }
   }
 

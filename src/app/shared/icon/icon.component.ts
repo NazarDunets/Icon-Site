@@ -43,7 +43,8 @@ import {
     mdiMicrosoftVisualStudioCode,
     mdiPuzzleOutline,
     mdiTagMinus,
-    mdiHeart
+    mdiHeart,
+    mdiContentCopy
 } from '@mdi/js'
 
 @Component({
@@ -75,6 +76,7 @@ export class IconComponent  {
         new Icon('code-braces', mdiCodeBraces),
         new Icon('comment-account', mdiCommentAccount),
         new Icon('comment-outline', mdiCommentOutline),
+        new Icon('content-copy', mdiContentCopy),
         new Icon('delete', mdiDelete),
         new Icon('download', mdiDownload),
         new Icon('ember', mdiEmber),
