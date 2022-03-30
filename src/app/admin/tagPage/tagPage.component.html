@@ -1,8 +1,12 @@
-<mdi-banner title="Manage Tags" [carbon]="false"></mdi-banner>
-<div class="container-fluid">
-  <mdi-admin-user-bar [showBack]="true"></mdi-admin-user-bar>
+<mdi-banner
+  title="Tag Icons"
+  icon="tag-plus"
+  adminReturn="true"
+  [carbon]="false"
+></mdi-banner>
+<div class="container">
   <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-8">
       <div class="card p-3">
         <h2>Tag Form</h2>
         <div>
@@ -45,12 +49,12 @@
 
       </div>
     </div>
-    <div class="col-md-6">
-      <div class="card p-3">
+    <div class="col-md-4">
+      <!-- <div class="card p-3">
         <h2>Approve Tags</h2>
         <p>Coming Soon...</p>
-      </div>
-      <div class="card p-3 mt-3">
+      </div> -->
+      <div class="card p-3">
         <h2>Downloads</h2>
         <a class="btn btn-primary" href="/api/csv/38EF63D0-4744-11E4-B3CF-842B2B6CFE1B?headers=Icon%20Name,Icon%20Alias&columns=icon.name,icon.aliases">Download
           .csv</a>

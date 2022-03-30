@@ -37,7 +37,6 @@ export class AdminUsersPageComponent {
     this.packages = await this.iconService.getAdminPackages();
     this.selectedPackage = this.packages[0];
     this.users = await this.userService.getAdminUsers(this.selectedPackage.id);
-    console.log(this.users);
   }
 
   async addUser() {

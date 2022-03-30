@@ -1,6 +1,10 @@
-<mdi-banner title="User Management" [carbon]="false"></mdi-banner>
+<mdi-banner
+  title="Add / Edit Users"
+  icon="account-group"
+  adminReturn="true"
+  [carbon]="false"
+></mdi-banner>
 <div class="container">
-  <mdi-admin-user-bar [showBack]="true"></mdi-admin-user-bar>
   <div class="card">
     <div
       *ngIf="selectedUser == null"
@@ -25,7 +29,7 @@
         </thead>
         <tbody>
           <tr *ngFor="let u of users" [ngValue]="u">
-            <td>
+            <td class="align-middle">
               <a
                 *ngIf="!!u.github"
                 [href]="'https://github.com/' + u.github"
@@ -34,9 +38,9 @@
                 {{u.github}}
               </a>
             </td>
-            <td>{{u.name}}</td>
+            <td class="align-middle">{{u.name}}</td>
             <td>
-              <button class="btn" (click)="editUser(u)">
+              <button class="btn btn-sm" (click)="editUser(u)">
                 <mdi-icon name="pencil"></mdi-icon>
               </button>
             </td>

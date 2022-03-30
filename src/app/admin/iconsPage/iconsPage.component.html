@@ -1,12 +1,11 @@
-<mdi-banner title="Icon Management" [carbon]="false"></mdi-banner>
+<mdi-banner
+  title="Add / Edit Icon"
+  icon="plus-circle-outline"
+  adminReturn="true"
+  [carbon]="false"
+></mdi-banner>
 <div class="container">
-  <mdi-admin-user-bar [showBack]="true"></mdi-admin-user-bar>
   <div class="card p-3">
-    <div class="row mb-2">
-      <div class="col-md-8">
-        <p>Please ask on Slack if you are unsure about modifying or adding an icon.</p>
-      </div>
-    </div>
     <div class="card mb-3 border-success" *ngIf="iconAddSuccess">
       <div class="card-header text-white bg-success">
         Icon added successfully!
@@ -71,6 +70,14 @@
               class="btn btn-outline-success" (click)="addIcon()">Add New Icon</button>
             <button *ngIf="newIcon !== null"
               class="btn btn-outline-secondary" (click)="cancelIcon()">Cancel New Icon</button>
+          </div>
+          <div class="col-md-5">
+            <div class="card bg-light">
+              <div class="card-body info-box">
+                <mdi-icon name="alert-circle"></mdi-icon>
+                Please ask on Slack if you are unsure about modifying or adding an icon.
+              </div>
+            </div>
           </div>
         </div>
       </div>

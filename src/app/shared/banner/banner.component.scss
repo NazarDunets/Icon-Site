@@ -5,27 +5,16 @@
     color: #FFF;
     
     h1 {
+        align-items: center;
+        display: flex;
         margin: 0;
-        .icon {
+
+        mdi-icon {
             display: inline-block;
             padding: 4px;
-            background: #FFF;
-            width: 32px;
-            height: 32px;
-            border-radius: 4px;
             vertical-align: middle;
-            margin-top: -8px;
-            margin-right: 4px;
-
-            svg {
-                width: 24px;
-                height: 24px;
-                vertical-align: top;
-
-                path {
-                    fill: #414F56;
-                }
-            }
+            margin-top: -1px;
+            margin-right: .5rem;
         }
     }
     
@@ -34,6 +23,23 @@
             position: absolute;
             right: 20px;
             top: -29px;
+        }
+    }
+}
+
+.admin-return {
+    padding-top: .5rem;
+
+    a {
+        border-radius: 5px;
+        color: inherit;
+        font-size: 1rem;
+        font-weight: 300;
+        padding: .5rem;
+        text-decoration: none;
+
+        &:hover {
+            color: rgba(255, 255, 255, .8);
         }
     }
 }

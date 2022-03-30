@@ -1,11 +1,13 @@
-<div style="position:relative;">
+<div class="container">
     <h1>
-        <span *ngIf="data != null" class="icon">
-            <svg viewBox="0 0 24 24">
-                <path [attr.d]="data"></path>
-            </svg>
-        </span>
+        <mdi-icon *ngIf="data != null" [name]="data" size="2"></mdi-icon>
         <span [innerHtml]="name"></span>
     </h1>
+    <div *ngIf="!!adminReturn" class="admin-return">
+        <a class="back-link" routerLink="/admin/index">
+        <mdi-icon name="chevron-left"></mdi-icon>
+        Return to Admin Home
+        </a>
+    </div>
     <mdi-carbon *ngIf="carbon"></mdi-carbon>
 </div>

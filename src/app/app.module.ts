@@ -30,43 +30,44 @@ import { ContributorsPageComponent } from './contributorsPage/contributorsPage.c
 import { IconPageComponent } from './iconPage/iconPage.component';
 import { IconsPageComponent } from './iconsPage/iconsPage.component';
 import { DownloadPageComponent } from './downloadPage/downloadPage.component';
-import { AdminUserBarComponent } from './admin/userBar/userBar.component';
-import { AdminIconsPageComponent } from './admin/iconsPage/iconsPage.component';
-import { AdminIndexPageComponent } from './admin/indexPage/indexPage.component';
 import { ViewerPageComponent } from './viewerPage/viewerPage.component';
 import { ResourcesPageComponent } from './resourcesPage/resourcesPage.component';
-import { AdminLoginPageComponent } from './admin/loginPage/loginPage.component';
 import { NotFoundPageComponent } from './notFoundPage/notFoundPage.component';
 import { MarkdownComponent } from "app/shared/markdown/markdown.component";
-import { AdminAliasPageComponent } from 'app/admin/aliasPage/aliasPage.component';
-import { AdminProfilePageComponent } from 'app/admin/profilePage/profilePage.component';
-import { AdminUsersPageComponent } from 'app/admin/usersPage/usersPage.component';
 import { IssuesPageComponent } from 'app/issuesPage/issuesPage.component';
-import { AdminSheetPageComponent } from 'app/admin/sheetPage/sheetPage.component';
-import { AdminBasePageComponent } from 'app/admin/basePage/basePage.component';
-import { HistoryPageComponent } from 'app/historyPage/historyPage.component';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { MockInterceptor } from 'app/shared/interceptor/mock.interceptor';
 import { UserComponent } from 'app/shared/userPhoto/userPhoto.component';
 import { IconSearchComponent } from 'app/shared/iconSearch/iconSearch.component';
 import { PromiseCacheService } from 'app/shared/promiseCache.service';
-import { AdminTagPageComponent } from 'app/admin/tagPage/tagPage.component';
-import { AdminIndexeddbPageComponent } from 'app/admin/indexeddbPage/indexeddbPage.component';
-import { AdminRenamePageComponent } from 'app/admin/renamePage/renamePage.component';
 import { GithubPageComponent } from 'app/githubPage/githubPage.component';
 import { SidebarComponent } from 'app/viewerPage/sidebar/sidebar.component';
 import { ContributorBadgeComponent } from 'app/contributorsPage/contributorBadge/contributorBadge.component';
 import { ModificationTableComponent } from 'app/shared/modificationTable/modificationTable.component';
 import { IconPreviewComponent } from 'app/shared/iconPreview/iconPreview.component';
-import { AssignIssueModal } from 'app/historyPage/assignIssueModal/assignIssueModal.component';
 import { AssignUserModal } from 'app/shared/assignUserModal/assignUserModal.component';
 import { AssignTagModal } from 'app/shared/assignTagModal/assignTagModal.component';
 import { AssignAliasModal } from 'app/shared/assignAliasModal/assignAliasModal.component';
 import { ConfirmModal } from './shared/confirmModal/confirmModal.component';
 import { SelectIconModal } from './shared/selectIconModal/selectIconModal.component';
 
-import { PackageType } from './shared/enums/packageType.enum';
+import { AdminComponent } from './admin/admin.component';
+import { AdminLoginPageComponent } from './admin/loginPage/loginPage.component';
+import { AdminUserBarComponent } from './admin/userBar/userBar.component';
+import { AdminIconsPageComponent } from './admin/iconsPage/iconsPage.component';
+import { AdminIndexPageComponent } from './admin/indexPage/indexPage.component';
+import { AdminAliasPageComponent } from 'app/admin/aliasPage/aliasPage.component';
+import { AdminProfilePageComponent } from 'app/admin/profilePage/profilePage.component';
+import { AdminUsersPageComponent } from 'app/admin/usersPage/usersPage.component';
+import { AdminSheetPageComponent } from 'app/admin/sheetPage/sheetPage.component';
+import { AdminBasePageComponent } from 'app/admin/basePage/basePage.component';
+import { AdminTagPageComponent } from 'app/admin/tagPage/tagPage.component';
+import { AdminHistoryPageComponent } from 'app/admin/historyPage/historyPage.component';
+import { AdminIndexeddbPageComponent } from 'app/admin/indexeddbPage/indexeddbPage.component';
 import { AdminReleasePageComponent } from './admin/releasePage/releasePage.component';
+import { AdminAssignIssueModal } from './admin/historyPage/assignIssueModal/assignIssueModal.component';
+
+import { PackageType } from './shared/enums/packageType.enum';
 
 const appRoutes: Routes = [
   {
@@ -435,20 +436,6 @@ const appRoutes: Routes = [
     }
   },
   {
-    path: 'history',
-    component: HistoryPageComponent,
-    data: {
-      package: PackageType.MaterialDesignIcons
-    }
-  },
-  {
-    path: 'history/light',
-    component: HistoryPageComponent,
-    data: {
-      package: PackageType.MaterialDesignIconsLight
-    }
-  },
-  {
     path: 'resources',
     component: ResourcesPageComponent
   },
@@ -458,51 +445,60 @@ const appRoutes: Routes = [
   },
   {
     path: 'admin',
-    component: AdminLoginPageComponent
-  },
-  {
-    path: 'admin/index',
-    component: AdminIndexPageComponent
-  },
-  {
-    path: 'admin/icons',
-    component: AdminIconsPageComponent
-  },
-  {
-    path: 'admin/alias',
-    component: AdminAliasPageComponent
-  },
-  {
-    path: 'admin/profile',
-    component: AdminProfilePageComponent
-  },
-  {
-    path: 'admin/tag',
-    component: AdminTagPageComponent
-  },
-  {
-    path: 'admin/indexeddb',
-    component: AdminIndexeddbPageComponent
-  },
-  {
-    path: 'admin/release',
-    component: AdminReleasePageComponent
-  },
-  {
-    path: 'admin/rename',
-    component: AdminRenamePageComponent
-  },
-  {
-    path: 'admin/sheet',
-    component: AdminSheetPageComponent
-  },
-  {
-    path: 'admin/base',
-    component: AdminBasePageComponent
-  },
-  {
-    path: 'admin/users',
-    component: AdminUsersPageComponent
+    component: AdminComponent,
+    children: [
+      {
+        path: '',
+        component: AdminLoginPageComponent
+      },
+      {
+        path: 'index',
+        component: AdminIndexPageComponent
+      },
+      {
+        path: 'icons',
+        component: AdminIconsPageComponent
+      },
+      {
+        path: 'alias',
+        component: AdminAliasPageComponent
+      },
+      {
+        path: 'profile',
+        component: AdminProfilePageComponent
+      },
+      {
+        path: 'tag',
+        component: AdminTagPageComponent
+      },
+      {
+        path: 'history',
+        component: AdminHistoryPageComponent,
+        data: {
+          package: PackageType.MaterialDesignIcons
+        }
+      },
+      {
+        path: 'indexeddb',
+        component: AdminIndexeddbPageComponent
+      },
+      {
+        path: 'release',
+        component: AdminReleasePageComponent
+      },
+      {
+        path: 'sheet',
+        component: AdminSheetPageComponent
+      },
+      {
+        path: 'base',
+        component: AdminBasePageComponent
+      },
+      {
+        path: 'users',
+        component: AdminUsersPageComponent
+      },
+    ]
   },
   { path: '**', component: NotFoundPageComponent }
 ];
@@ -521,9 +517,9 @@ const appRoutes: Routes = [
     ViewerPageComponent,
     ResourcesPageComponent,
     DownloadPageComponent,
-    HistoryPageComponent,
     IssuesPageComponent,
     GithubPageComponent,
+    AdminComponent,
     AdminUserBarComponent,
     AdminSheetPageComponent,
     AdminBasePageComponent,
@@ -534,9 +530,9 @@ const appRoutes: Routes = [
     AdminProfilePageComponent,
     AdminUsersPageComponent,
     AdminTagPageComponent,
+    AdminHistoryPageComponent,
     AdminIndexeddbPageComponent,
     AdminReleasePageComponent,
-    AdminRenamePageComponent,
     NotFoundPageComponent,
     ModificationTableComponent,
     IconPreviewComponent,
@@ -548,7 +544,7 @@ const appRoutes: Routes = [
     SidebarComponent,
     MarkdownComponent,
     IconSearchComponent,
-    AssignIssueModal,
+    AdminAssignIssueModal,
     AssignUserModal,
     AssignTagModal,
     AssignAliasModal,
@@ -556,7 +552,7 @@ const appRoutes: Routes = [
     SelectIconModal
   ],
   entryComponents: [
-    AssignIssueModal,
+    AdminAssignIssueModal,
     AssignUserModal,
     AssignTagModal,
     AssignAliasModal,

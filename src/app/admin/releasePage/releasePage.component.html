@@ -1,10 +1,18 @@
-<mdi-banner title="Release Management" [carbon]="false"></mdi-banner>
-<div class="container-fluid">
-  <mdi-admin-user-bar [showBack]="true"></mdi-admin-user-bar>
+<mdi-banner
+  title="Release Management"
+  icon="archive-sync"
+  adminReturn="true"
+  [carbon]="false"
+></mdi-banner>
+<div class="container">
   <div class="card p-3">
-    <div class="row mb-2">
-      <div class="col-md-12">
-        <p>If you do not know what this page is for then do not touch anything! Many of these operations are <em>very</em> CPU intensive and will slow down the production site.</p>
+    <div class="card bg-warning mb-3">
+      <div class="card-header">
+        <mdi-icon name="alert-circle"></mdi-icon>
+          STOP! Read this first!
+      </div>
+      <div class="card-body info-box">
+        If you do not know what this page is for then do not touch anything!<br />Many of these operations are <em>very</em> CPU intensive and will slow down the production site.
       </div>
     </div>
     <div class="row">
@@ -130,13 +138,13 @@
             <div class="col-md-10">
               <div class="mb-2">Generate <code>@mdi/svg</code></div>
               <button class="btn btn-primary mr-2"
-                [disabled]="isGenerateSvgDisabled || selectedFontVersion.released"
+                [disabled]="isGenerateSvgDisabled || selectedFontVersion?.released"
                 (click)="generateSvg()">Generate</button>
               <a class="btn btn-outline-primary"
                 [ngClass]="{ 'disabled': !isSvgBundleCached }"
                 [attr.href]="downloadSvgBundle()">Download</a>
               <span *ngIf="isSvgBundleCached" class="ml-3 align-middle">Cached on {{svgBundleCacheDate}}</span>
-              <div *ngIf="selectedFontVersion.released" class="alert alert-info mt-2">
+              <div *ngIf="selectedFontVersion?.released" class="alert alert-info mt-2">
                 Released versions cannot be generated! Download from cache.
               </div>
             </div>
@@ -148,7 +156,7 @@
             <div class="col-md-10">
               <div class="mb-2">Generate <code>@mdi/font</code></div>
               <button class="btn btn-primary mr-2"
-                [disabled]="isGenerateFontDisabled || selectedFontVersion.released"
+                [disabled]="isGenerateFontDisabled || selectedFontVersion?.released"
                 (click)="generateFont()">Generate</button>
               <a class="btn btn-outline-primary"
                 [ngClass]="{ 'disabled': !isFontBundleCached || !isSvgBundleCached }"
@@ -157,7 +165,7 @@
               <div *ngIf="isFontBundleCached && !selectedFontVersion.released" class="alert alert-info mt-2">
                 <strong>Note:</strong> Generate slows down the entire site for ~30 seconds. Download the cache!
               </div>
-              <div *ngIf="selectedFontVersion.released" class="alert alert-info mt-2">
+              <div *ngIf="selectedFontVersion?.released" class="alert alert-info mt-2">
                 Released versions cannot be generated! Download from cache.
               </div>
             </div>
