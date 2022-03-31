@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { LoginService } from 'app/admin/services/login.service';
 import { IconService } from 'app/shared/icon.service';
 import { UserService } from 'app/shared/user.service';
-import { ModificationService } from 'app/shared/modification.service';
 import { User } from 'app/shared/models/user.model';
 import { Package } from 'app/shared/models/package.model';
 
@@ -13,8 +12,7 @@ import { Package } from 'app/shared/models/package.model';
   providers: [
     LoginService,
     UserService,
-    IconService,
-    ModificationService
+    IconService
   ]
 })
 export class AdminUsersPageComponent {
