@@ -8,41 +8,57 @@
   <div class="row">
     <div class="col-md-8">
       <div class="card p-3">
-        <h2>Alias Form</h2>
-        <div>
-          <label>
-            <span class="d-block">Package</span>
-            <select [(ngModel)]="selectedPackage" (change)="selectPackage()" class="custom-select">
-              <option *ngFor="let p of packages" [ngValue]="p">{{p.name}}</option>
-            </select>
-          </label>
-        </div>
-        <div>
-          <label>
-            <span class="d-block">Icon Name</span>
-            <mdi-icon-search [package]="selectedPackage" [(icon)]="selectedIcon" (iconChange)="selectIcon()"></mdi-icon-search>
-          </label>
-        </div>
-        <div *ngIf="selectedIcon != null">
-          Existing Aliases
-          <div>
-            <p *ngIf="selectedIcon.aliases.length == 0">No aliases have been assigned.</p>
-            <span *ngFor="let a of selectedIcon.aliases; let i = index">
-              <code>{{a.name}}</code>
-              <span *ngIf="i != selectedIcon.aliases.length - 1">,</span>
-            </span>
+        <div class="row mb-3">
+          <div class="col-md-2">
+            <span class="step">Step 1</span>
+          </div>
+          <div class="col-md-10">
+            <label>
+              <span class="d-block">Select a Package</span>
+              <select [(ngModel)]="selectedPackage" (change)="selectPackage()" class="custom-select">
+                <option *ngFor="let p of packages" [ngValue]="p">{{p.name}}</option>
+              </select>
+            </label>
           </div>
         </div>
-        <div *ngIf="selectedIcon != null">
-          Enter Alias
-          <div>
-            <input type="text" class="form-control" [(ngModel)]="aliasName" (keyup)="validate()" />
+        <div class="row mb-3">
+          <div class="col-md-2">
+            <span class="step">Step 2</span>
           </div>
-          <div>
-            <button class="btn btn-primary btn-block mt-2" [disabled]="disabledAlias" (click)="submitAlias()">Add Alias</button>
+          <div class="col-md-10">
+            <label>
+              <span class="d-block">Search for an Icon</span>
+              <mdi-icon-search [package]="selectedPackage" [(icon)]="selectedIcon" (iconChange)="selectIcon()"></mdi-icon-search>
+            </label>
           </div>
         </div>
-
+        <div class="row mb-3" *ngIf="selectedIcon != null">
+          <div class="col-md-2">
+            <span class="step">Step 3</span>
+          </div>
+          <div class="col-md-10">
+            Enter New Aliases (Comma separated)
+            <div>
+              <input type="text" class="form-control" [(ngModel)]="aliasName" (keyup)="validate()" />
+            </div>
+            <div>
+              <button class="btn btn-primary btn-block mt-2" [disabled]="disabledAlias" (click)="submitAlias()">Add Alias(es)</button>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-3" *ngIf="selectedIcon != null">
+          <div class="col-md-2"></div>
+          <div class="col-md-10">
+            Existing Aliases
+            <div>
+              <p *ngIf="selectedIcon.aliases.length == 0">No aliases have been assigned.</p>
+              <span *ngFor="let a of selectedIcon.aliases; let i = index">
+                <code>{{a.name}}</code>
+                <span *ngIf="i != selectedIcon.aliases.length - 1">,</span>
+              </span>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="card p-3 mt-3">
         <div>
