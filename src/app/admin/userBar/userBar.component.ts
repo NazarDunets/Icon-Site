@@ -26,5 +26,6 @@ export class AdminUserBarComponent {
 
   async logout () {
     await this.loginService.logout();
+    this.user = null;
   }
 }
