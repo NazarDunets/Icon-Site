@@ -1,14 +1,7 @@
 <div class="row mb-2 user-bar">
-  <div *ngIf="showBack" class="col-md-4">
-    <a class="btn btn-primary btn-sm" (click)="goBack()">
-      <mdi-icon name="chevron-left"></mdi-icon>
-      Return to Menu
-    </a>
-  </div>
   <div
     *ngIf="user"
-    [ngClass]="{'col-md-8': showBack, 'col-md-12': !showBack}" 
-    class="d-flex justify-content-end align-items-center"
+    class="col-md-12 d-flex justify-content-end align-items-center"
   >
       <p class="m-0">{{user?.name || user?.github}}</p>
       <img

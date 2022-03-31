@@ -6,9 +6,9 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./banner.component.scss']
 })
 export class BannerComponent {
-  
   @Input('title') name: string = 'Loading...';
   @Input('icon') data: string = null;
   @Input('carbon') carbon: boolean;
+  @Input('adminReturn') adminReturn: boolean;
   subtitle: string = null;
 }

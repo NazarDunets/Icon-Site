@@ -1,32 +1,35 @@
-import { Component, Input, ViewChild, ElementRef } from '@angular/core';
+import { Component } from '@angular/core';
+import { Package } from 'app/shared/models/package.model';
 import { Modification } from 'app/shared/models/modification.model';
 import { ModificationService } from 'app/shared/modification.service';
+import { IconService } from 'app/shared/icon.service';
 import { ModificationType } from 'app/shared/enums/modificationType.enum';
 import { ActivatedRoute } from '@angular/router';
-import { DomSanitizer } from '@angular/platform-browser';
 import { LoginService } from 'app/admin/services/login.service';
-import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
-import { AssignIssueModal } from 'app/historyPage/assignIssueModal/assignIssueModal.component';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { AdminAssignIssueModal } from 'app/admin/historyPage/assignIssueModal/assignIssueModal.component';
 
 @Component({
-  selector: 'mdi-history-page',
+  selector: 'mdi-admin-history-page',
   templateUrl: './historyPage.component.html',
   styleUrls: ['./historyPage.component.scss'],
   providers: [
     ModificationService,
-    LoginService
+    LoginService,
+    IconService
   ]
 })
-export class HistoryPageComponent {
-  title: string = 'History';
-
+export class AdminHistoryPageComponent {
   constructor(
     private modificationService: ModificationService,
     private route: ActivatedRoute,
-    private sanitizer: DomSanitizer,
     private loginService: LoginService,
-    private modalService: NgbModal
+    private modalService: NgbModal,
+    private iconService: IconService
   ) {}
+
+  public packages: Package[] = [];
+  public selectedPackage: Package = null;
 
   modificationsByDate: GroupByDateModification[] = [];
   modificationType = ModificationType;
@@ -75,13 +78,14 @@ export class HistoryPageComponent {
   isAuthed: boolean = false;
 
   async ngOnInit() {
-    let mods: string[] = [];
+    await this.loginService.isAuthed();
+    this.packages = await this.iconService.getAdminPackages();
+    this.selectedPackage = this.packages[0];
     await this.toggle();
-    this.isAuthed = await this.loginService.isAuthed();
   }
 
   async assignIssue(m: Modification) {
-    const modal = this.modalService.open(AssignIssueModal);
+    const modal = this.modalService.open(AdminAssignIssueModal);
     modal.componentInstance.issueNumber = m.issue;
     modal.result.then((result) => {
       m.issue = result;
@@ -106,9 +110,9 @@ export class HistoryPageComponent {
 
   async loadMore() {
     this.page++;
-    let packageId = this.route.snapshot.data['package'];
+    // let packageId = this.route.snapshot.data['package'];
     let mods = this.modificationTypes.filter(m => m.selected).map(m => m.modificationType);
-    let modifications = await this.modificationService.getModificationsByType(packageId, mods, this.page, 100);
+    let modifications = await this.modificationService.getModificationsByType(this.selectedPackage.id, mods, this.page, 100);
     for (let m of modifications) {
       if (this.currentDate != this.friendlyDate(new Date(m.date))) {
         this.currentDate = this.friendlyDate(new Date(m.date));
@@ -146,6 +150,9 @@ export class HistoryPageComponent {
     return 'https://github.com/Templarian/MaterialDesign/issues/new?title=History&body=Reason%3A%0D%0A%0D%0A%0D%0A%5BView+History+Item%5D%28http%3A%2F%2Fmaterialdesignicons.com%2Fhistory%2F' + m.id + '%29';
   }
   
+  async selectPackage() {
+    await this.toggle();
+  }
 }
 
 class SelectModificationType {

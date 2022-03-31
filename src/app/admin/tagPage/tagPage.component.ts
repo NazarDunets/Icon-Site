@@ -46,9 +46,6 @@ export class AdminTagPageComponent {
 
   async ngOnInit() {
     await this.loginService.isAuthed();
-    // Authed
-    console.log('authed');
-    // Load Package
     this.selectPackage();
   }
 

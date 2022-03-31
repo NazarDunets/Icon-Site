@@ -52,10 +52,6 @@ export class AdminReleasePageComponent {
     this.selectPackage();
   }
 
-  goBack() {
-    this.router.navigateByUrl('/admin/index')
-  }
-
   tags: Tag[] = [];
 
   selectedTag: Tag;

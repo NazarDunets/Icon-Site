@@ -32,18 +32,7 @@ export class AdminProfilePageComponent {
 
   async ngOnInit() {
     await this.loginService.isAuthed();
-    // Authed
-    console.log('authed');
-    // Load Package
     this.loadUser();
-  }
-
-  goBack () {
-    this.router.navigateByUrl('/admin/index')
-  }
-
-  async logout () {
-    await this.loginService.logout();
   }
 
   async loadUser() {

@@ -1,12 +1,12 @@
 import { Component, Input, ViewChild, ElementRef } from '@angular/core';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
-import { delay } from '../../shared/delay';
+import { delay } from '../../../shared/delay';
 
 @Component({
-  selector: 'mdi-assign-issue-modal',
+  selector: 'mdi-admin-assign-issue-modal',
   templateUrl: './assignIssueModal.component.html'
 })
-export class AssignIssueModal {
+export class AdminAssignIssueModal {
   @Input() issueNumber: number;
   @ViewChild('issueNumberInput', { static: true }) issueNumberInput: ElementRef;
 

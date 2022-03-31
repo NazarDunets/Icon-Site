@@ -1,58 +1,157 @@
-<mdi-banner title="Icon Management" [carbon]="false"></mdi-banner>
-<div class="container">
-    <mdi-admin-user-bar></mdi-admin-user-bar>
-    <div class="card p-3">
-        <table class="table">
-            <tr>
-                <th class="border-top-0">Feature</th>
-                <th class="border-top-0">Description</th>
-                <th class="border-top-0"></th>
-            </tr>
-            <tr>
-                <td>Icons</td>
-                <td><p>Add / Edit Icons.</p></td>
-                <td class="text-right"><a class="btn btn-primary btn-sm" routerLink="/admin/icons">View</a></td>
-            </tr>
-            <tr>
-                <td>Alias Icons</td>
-                <td><p>Edit and manage aliases.</p></td>
-                <td class="text-right"><a class="btn btn-primary btn-sm" routerLink="/admin/alias">View</a></td>
-            </tr>
-            <tr>
-                <td>Tags Icons</td>
-                <td><p>Edit and manage tags.</p></td>
-                <td class="text-right"><a class="btn btn-primary btn-sm" routerLink="/admin/tag">View</a></td>
-            </tr>
-            <tr>
-                <td>Base Icons</td>
-                <td><p>List of icons grouped by base icon.</p></td>
-                <td class="text-right"><a class="btn btn-primary btn-sm" routerLink="/admin/base">View</a></td>
-            </tr>
-            <tr>
-                <td>Release Management</td>
-                <td><p>Manage the release pipeline.</p></td>
-                <td class="text-right"><a class="btn btn-primary btn-sm" routerLink="/admin/release">View</a></td>
-            </tr>
-            <tr>
-                <td>History</td>
-                <td><p>Assign issues to history entries.</p></td>
-                <td class="text-right"><a class="btn btn-primary btn-sm" routerLink="/history">View</a></td>
-            </tr>
-            <tr>
-                <th>Other Feature</th>
-                <th>Description</th>
-                <th></th>
-            </tr>
-            <tr>
-                <td>Site</td>
-                <td><p>This entire site including all the admin features can be edited in GitHub.</p></td>
-                <td class="text-right"><a class="btn btn-primary btn-sm" target="_blank" href="https://github.com/Pictogrammers/Icon-Site">GitHub</a></td>
-            </tr>
-            <tr>
-                <td>Documentation</td>
-                <td><p>Please edit the documentation in GitHub.</p></td>
-                <td class="text-right"><a class="btn btn-primary btn-sm" target="_blank" href="https://github.com/Pictogrammers/Icon-Site/tree/master/src/content">GitHub</a></td>
-            </tr>
-        </table>
+<mdi-banner
+    title="Pictogrammers Admin"
+    icon="pictogrammers"
+    [carbon]="false"
+></mdi-banner>
+<div class="container pb-4">
+    <div class="card">
+        <div class="card-header">
+            Icon Management
+        </div>
+        <div class="row px-4 pt-4 pb-2">
+            <div class="col-sm-6">
+                <div class="card">
+                    <a class="card-horizontal" routerLink="/admin/icons">
+                        <mdi-icon name="plus-circle-outline" size="2" class="card-img-left"></mdi-icon>
+                        <div class="card-body">
+                            <h5 class="card-title">Add / Edit Icon</h5>
+                            <p class="card-text">Add a new icon or edit an existing icon.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card">
+                    <a class="card-horizontal" routerLink="/admin/alias">
+                        <mdi-icon name="rename-box" size="2" class="card-img-left"></mdi-icon>
+                        <div class="card-body">
+                            <h5 class="card-title">Alias Icons</h5>
+                            <p class="card-text">Add aliases to icons, making them easier to find.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row px-4 py-2">
+            <div class="col-sm-6">
+                <div class="card">
+                    <a class="card-horizontal" routerLink="/admin/base">
+                        <mdi-icon name="select-compare" size="2" class="card-img-left"></mdi-icon>
+                        <div class="card-body">
+                            <h5 class="card-title">Base Icons</h5>
+                            <p class="card-text">View and set base icons for modifiers and variants.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card">
+                    <a class="card-horizontal" routerLink="/admin/tag">
+                        <mdi-icon name="tag-plus" size="2" class="card-img-left"></mdi-icon>
+                        <div class="card-body">
+                            <h5 class="card-title">Tag Icons</h5>
+                            <p class="card-text">Categorize icons into tags.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row px-4 py-2">
+            <div class="col-sm-6">
+                <div class="card">
+                    <a class="card-horizontal" routerLink="/admin/history">
+                        <mdi-icon name="history" size="2" class="card-img-left"></mdi-icon>
+                        <div class="card-body">
+                            <h5 class="card-title">History</h5>
+                            <p class="card-text">View library activity and assign issues to entries.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card">
+                    <a class="card-horizontal" routerLink="/admin/release">
+                        <mdi-icon name="archive-sync" size="2" class="card-img-left"></mdi-icon>
+                        <div class="card-body">
+                            <h5 class="card-title">Release Management</h5>
+                            <p class="card-text">Assign codepoints to releases and generate assets.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-header mt-4 border-top">
+            User Management
+        </div>
+        <div class="row p-4">
+            <div class="col-sm-6">
+                <div class="card">
+                    <a class="card-horizontal" href="/admin/users">
+                        <mdi-icon name="account-group" size="2" class="card-img-left"></mdi-icon>
+                        <div class="card-body">
+                            <h5 class="card-title">Add / Edit Users</h5>
+                            <p class="card-text">Add a new user or edit an existing user.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-header mt-4 border-top">
+            Site Content
+        </div>
+        <div class="row p-4">
+            <div class="col-sm-6">
+                <div class="card">
+                    <a class="card-horizontal" target="_blank" href="https://github.com/Pictogrammers/Icon-Site">
+                        <mdi-icon name="code-braces" size="2" class="card-img-left"></mdi-icon>
+                        <div class="card-body">
+                            <h5 class="card-title">Site Code</h5>
+                            <p class="card-text">Edit any aspect of this site on GitHub.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card">
+                    <a class="card-horizontal" target="_blank" href="https://github.com/Pictogrammers/Icon-Site/tree/master/src/content">
+                        <mdi-icon name="book-open-variant" size="2" class="card-img-left"></mdi-icon>
+                        <div class="card-body">
+                            <h5 class="card-title">Documentation</h5>
+                            <p class="card-text">Help keep our documentation up-to-date on GitHub.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-header mt-4 border-top">
+            Other Useful Links
+        </div>
+        <div class="row p-4">
+            <div class="col-sm-6">
+                <div class="card">
+                    <a class="card-horizontal" target="_blank" href="https://github.com/Templarian/MaterialDesign/issues">
+                        <mdi-icon name="github" size="2" class="card-img-left"></mdi-icon>
+                        <div class="card-body">
+                            <h5 class="card-title">Material Design GitHub Issues</h5>
+                            <p class="card-text">View open issues for the Material Design Icons library.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card">
+                    <a class="card-horizontal" target="_blank" href="https://github.com/Templarian/MaterialDesignLight/issues">
+                        <mdi-icon name="github" size="2" class="card-img-left"></mdi-icon>
+                        <div class="card-body">
+                            <h5 class="card-title">Material Design Light GitHub Issues</h5>
+                            <p class="card-text">View open issues for the Material Design Light library.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

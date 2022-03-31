@@ -1,10 +1,13 @@
-<mdi-banner title="Profile" [carbon]="false"></mdi-banner>
-<div class="container-fluid">
-  <mdi-admin-user-bar [showBack]="true"></mdi-admin-user-bar>
+<mdi-banner
+  title="Profile"
+  icon="account-circle"
+  adminReturn="true"
+  [carbon]="false"
+></mdi-banner>
+<div class="container">
   <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-8">
       <div class="card p-3">
-        <h2>Profile Form</h2>
         <form>
           <div class="form-group">
             <label>
@@ -34,17 +37,13 @@
             <label>
               Website
             </label>
-            <input type="text" name="website" [(ngModel)]="editUser.website" class="form-control" />
+            <input type="url" name="website" placeholder="https://example.com" [(ngModel)]="editUser.website" class="form-control" />
           </div>
           <button class="btn btn-primary" (click)="submitProfile()">Update Profile</button>
         </form>
       </div>
     </div>
-    <div class="col-md-6">
-      <div class="card p-3 mb-3">
-        <h2>Disclaimer</h2>
-        <p>For privacy reasons we do not sync GitHub profile information.</p>
-      </div>
+    <div class="col-md-4">
       <div class="card p-3">
           <h2>Profile Photo</h2>
           <p>
@@ -55,6 +54,10 @@
             </ng-template>
           </p>
           <input type="file" id="files" name="files" (change)="handleFileSelect($event)" />
+        </div>
+        <div class="card p-3 mt-3">
+          <h2>Disclaimer</h2>
+          <p>For privacy reasons, we do not sync GitHub profile information.</p>
         </div>
     </div>
   </div>

@@ -42,9 +42,6 @@ export class AdminAliasPageComponent {
 
   async ngOnInit() {
     await this.loginService.isAuthed();
-    // Authed
-    console.log('authed');
-    // Load Package
     this.selectPackage();
   }
 

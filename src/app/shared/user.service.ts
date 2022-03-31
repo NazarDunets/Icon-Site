@@ -73,4 +73,8 @@ export class UserService {
       .toPromise();
   }
 
+  async addAdminUser(user: User): Promise<User> {
+    return await this.http.post<User>('/api/admin/user', { user })
+      .toPromise();
+  }
 }

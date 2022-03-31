@@ -1,0 +1,102 @@
+<mdi-banner
+  title="Add / Edit Users"
+  icon="account-group"
+  adminReturn="true"
+  [carbon]="false"
+></mdi-banner>
+<div class="container">
+  <div class="card">
+    <div
+      *ngIf="selectedUser == null"
+      class="col-md-12 p-4"
+    >
+      <div class="col-md-12 d-flex justify-content-end align-items-center">
+        <button
+          class="btn btn-primary"
+          (click)="addUser()"
+        >
+          <mdi-icon name="account-plus"></mdi-icon>
+          Add New User
+        </button>
+      </div>
+      <table class="table table-sm table-striped table-hover">
+        <thead>
+          <tr>
+            <th scope="col" class="border-top-0">GitHub</th>
+            <th scope="col" class="border-top-0">Name</th>
+            <th scope="col" class="border-top-0"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let u of users" [ngValue]="u">
+            <td class="align-middle">
+              <a
+                *ngIf="!!u.github"
+                [href]="'https://github.com/' + u.github"
+                target="_blank"
+              >
+                {{u.github}} <mdi-icon name="open-in-new" size=".5"></mdi-icon>
+              </a>
+            </td>
+            <td class="align-middle">{{u.name}}</td>
+            <td>
+              <button class="btn btn-sm" (click)="editUser(u)">
+                <mdi-icon name="pencil"></mdi-icon>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div
+      *ngIf="selectedUser != null"
+      class="col-md-12 p-4"
+    >
+      <form>
+        <div class="form-group">
+          <label for="github">
+            GitHub Username
+          </label>
+          <input type="text" id="github" name="github" [(ngModel)]="selectedUser.github" [readonly]="!!selectedUser?.id" required class="form-control" />
+        </div>
+        <div class="form-group">
+          <label for="name">
+            Name
+          </label>
+          <input type="text" id="name" name="name" [(ngModel)]="selectedUser.name" required class="form-control" />
+        </div>
+        <div class="form-group">
+          <label for="description">
+            Bio
+          </label>
+          <textarea type="text" id="description" name="description" [(ngModel)]="selectedUser.description" class="form-control" rows="6"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="twitter">
+            Twitter
+          </label>
+          <input type="text" id="twitter" name="twitter" [(ngModel)]="selectedUser.twitter" class="form-control" />
+        </div>
+        <div class="form-group">
+          <label for="website">
+            Website
+          </label>
+          <input type="url" placeholder="https://example.com" id="website" name="website" [(ngModel)]="selectedUser.website" class="form-control" />
+        </div>
+        <div class="row mb-2">
+          <div class="col-md-12 d-flex justify-content-end align-items-center">
+            <button type="button" class="btn btn-outline-secondary mr-3" (click)="clearSelectedUser()">
+              <mdi-icon name="close"></mdi-icon>
+              Cancel
+            </button>
+            <button type="submit" class="btn btn-primary" (click)="saveUser()">
+              <mdi-icon [name]="selectedUser?.id ? 'content-save' : 'check'"></mdi-icon>
+              {{ selectedUser?.id ? 'Save Changes' : 'Add User' }}
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,7 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { LoginService } from 'app/admin/services/login.service';
 import { UserService } from 'app/shared/user.service';
-import { Router, ActivatedRoute } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { Package } from 'app/shared/models/package.model';
 import { Icon } from 'app/shared/models/icon.model';
 import { IconService } from 'app/shared/icon.service';
@@ -41,8 +41,7 @@ export class AdminIconsPageComponent {
     private aliasService: AliasService,
     private tagService: TagService,
     private modalService: NgbModal,
-    private route: ActivatedRoute,
-    private router: Router
+    private route: ActivatedRoute
   ) {
     const pack = this.route.snapshot.data['package'];
     if (pack) {
@@ -80,10 +79,6 @@ export class AdminIconsPageComponent {
     const currentUser = await this.loginService.getAdmin();
     this.selectedUser = this.users.find(u => u.id === currentUser.id);
     this.styles = await this.iconService.getStyles(this.selectedPackage.id);
-  }
-
-  goBack() {
-    this.router.navigateByUrl('/admin/index');
   }
 
   async selectPackage() {
@@ -144,7 +139,6 @@ export class AdminIconsPageComponent {
   async submitIcon() {
     try {
       const icon = await this.iconService.getIconByName(this.newIcon.packageId, this.newIcon.name);
-      console.log(icon);
       alert('Icon name already exists!');
     } catch (e) {
       try {

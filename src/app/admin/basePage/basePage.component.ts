@@ -52,7 +52,6 @@ export class AdminBasePageComponent {
         });
       }
     }
-    console.log(this.baseIcons);
   }
 
   async ngOnInit() {

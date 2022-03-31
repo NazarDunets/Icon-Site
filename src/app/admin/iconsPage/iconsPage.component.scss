@@ -174,3 +174,11 @@
     fill: #FFF;
   }
 }
+
+.info-box {
+  display: flex;
+
+  mdi-icon {
+    padding-right: .5rem;
+  }
+}

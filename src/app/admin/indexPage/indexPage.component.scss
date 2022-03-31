@@ -10,3 +10,20 @@
     margin-left: .5rem;
   }
 }
+
+.card-horizontal {
+  display: flex;
+  flex: 1 1 auto;
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    color: #005cbf;
+  }
+
+  mdi-icon {
+    display: flex;
+    align-items: center;
+    padding: 0 0.5rem 0 1.5rem;
+  }
+}
