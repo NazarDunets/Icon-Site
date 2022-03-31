@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { LoginService } from 'app/admin/services/login.service';
 import { IconService } from 'app/shared/icon.service';
 import { UserService } from 'app/shared/user.service';
@@ -24,14 +25,22 @@ export class AdminUsersPageComponent {
     private loginService: LoginService,
     private iconService: IconService,
     private userService: UserService,
+    private router: Router
   ) {
-    
+
   }
 
   public selectedUser: User = null;
 
   async ngOnInit() {
     await this.loginService.isAuthed();
+
+    const adminUser = await this.loginService.getAdmin();
+    if (!adminUser.core) {
+      this.router.navigateByUrl('/admin');
+      return;
+    }
+
     this.packages = await this.iconService.getAdminPackages();
     this.selectedPackage = this.packages[0];
     this.users = await this.userService.getAdminUsers(this.selectedPackage.id);

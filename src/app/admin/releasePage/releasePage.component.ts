@@ -45,6 +45,13 @@ export class AdminReleasePageComponent {
 
   async ngOnInit() {
     await this.loginService.isAuthed();
+
+    const adminUser = await this.loginService.getAdmin();
+    if (!adminUser.core) {
+      this.router.navigateByUrl('/admin');
+      return;
+    }
+
     // Load Packages
     this.packages = await this.iconService.getAdminPackages();
     this.selectedPackage = this.packages[0];
