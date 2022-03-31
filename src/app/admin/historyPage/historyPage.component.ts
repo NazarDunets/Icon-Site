@@ -78,7 +78,7 @@ export class AdminHistoryPageComponent {
   isAuthed: boolean = false;
 
   async ngOnInit() {
-    await this.loginService.isAuthed();
+    this.isAuthed = await this.loginService.isAuthed();
     this.packages = await this.iconService.getAdminPackages();
     this.selectedPackage = this.packages[0];
     await this.toggle();
