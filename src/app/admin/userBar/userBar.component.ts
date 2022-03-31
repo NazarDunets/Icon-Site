@@ -18,7 +18,10 @@ export class AdminUserBarComponent {
   public user: User = null;
 
   async ngOnInit () {
-    this.user = await this.loginService.getAdmin();
+    const isAuthed = await this.loginService.isAuthed();
+    if (isAuthed) {
+      this.user = await this.loginService.getAdmin();
+    }
   }
 
   async logout () {
