@@ -473,10 +473,7 @@ const appRoutes: Routes = [
       },
       {
         path: 'history',
-        component: AdminHistoryPageComponent,
-        data: {
-          package: PackageType.MaterialDesignIcons
-        }
+        component: AdminHistoryPageComponent
       },
       {
         path: 'indexeddb',

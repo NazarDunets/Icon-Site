@@ -1,19 +1,18 @@
-<div class="container-fluid">
-    <div class="row border-top">
-        <div class="col-md-4"></div>
-        <div class="col-md-4 panel-login">
-            <h2>Contributor Access</h2>
-            <a href="api/admin/github?action=login" class="btn btn-primary btn-block pr-4">
-                <mdi-icon name="github" color="#FFF" style="float:left;margin-left:-0.25rem;"></mdi-icon>
-                Login with GitHub
-            </a>
-            <div class="panel">
-                <mdi-icon name="information-outline"></mdi-icon>
-                <p>
-                    All contributions are tracked back to the GitHub account.
-                </p>
-            </div>
-        </div>
-        <div class="col-md-4"></div>
-    </div>
+<mdi-banner
+    title="Pictogrammers Admin"
+    icon="pictogrammers"
+    [carbon]="false"
+></mdi-banner>
+<div class="container pb-4">
+  <div class="card">
+      <div class="card-header">
+          Log In
+      </div>
+      <div class="col-md-12 text-center p-4 mb-2">
+        <p>Welcome to the Pictogrammers Admin.</p>
+        <a href="api/admin/github?action=login" class="btn btn-primary w-25">
+          <mdi-icon name="github"></mdi-icon> Log in with GitHub
+        </a>
+      </div>
+  </div>
 </div>
