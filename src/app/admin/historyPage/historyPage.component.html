@@ -17,7 +17,7 @@
                             </a>
                             <div class="text-content">
                                 <span [innerHtml]="m.text"></span>
-                                <small>at {{friendlyTime(m.date)}} by {{m.user.name}}</small>
+                                <small>{{friendlyTime(m.date)}} by {{m.user.name}}</small>
                             </div>
                             <div class="actions">
                                 <span class="label">
@@ -35,7 +35,7 @@
                             </a>
                             <div class="text-content">
                                 <span [innerHtml]="m.text"></span>
-                                <small>at {{friendlyTime(m.date)}} by {{m.user.name}}</small>
+                                <small>{{friendlyTime(m.date)}} by {{m.user.name}}</small>
                             </div>
                             <div class="actions">
                                 <span class="label">
@@ -58,10 +58,9 @@
                                 </svg>
                             </a>
                             <div class="text">
-                                <span>Icon
-                                    <code>{{m.icon.name}}</code> created.</span>
+                                <span><code>{{m.icon.name}}</code> created.</span>
                                 <small>
-                                  at {{friendlyTime(m.date)}} by {{m.user.name}}
+                                  {{friendlyTime(m.date)}} by {{m.user.name}}
                                   <span *ngIf="m.version && m.version.major != null">
                                     | v{{m.version.major}}.{{m.version.minor}}.{{m.version.patch}}
                                   </span>
@@ -75,10 +74,7 @@
                                     #{{m.issue}}
                                 </a>
                                 <button *ngIf="isAuthed" (click)="assignIssue(m)"
-                                    class="btn btn-secondary btn-sm">Assign Issue</button>
-                                <a target="_blank" *ngIf="!isAuthed && m.issue == null"
-                                    [attr.href]="friendlyReport(m)"
-                                    class="btn btn-secondary btn-sm">Report</a>
+                                    class="btn btn-secondary btn-sm ml-1">Assign</button>
                             </div>
                         </div>
                         <div *ngSwitchCase="modificationType.IconRenamed" class="d-flex flex-row">
@@ -96,12 +92,12 @@
                                 </svg>
                             </a>
                             <div class="text">
-                                <span>Icon
+                                <span>
                                     <code class="name-before">{{m.iconNameBefore}}</code> renamed to
                                     <code class="name-after">{{m.iconNameAfter}}</code>.
                                 </span>
                                 <small>
-                                  at {{friendlyTime(m.date)}} by {{m.user.name}}
+                                  {{friendlyTime(m.date)}} by {{m.user.name}}
                                   <span *ngIf="m.version && m.version.major != null">
                                     | v{{m.version.major}}.{{m.version.minor}}.{{m.version.patch}}
                                   </span>
@@ -115,10 +111,7 @@
                                     #{{m.issue}}
                                 </a>
                                 <button *ngIf="isAuthed" (click)="assignIssue(m)"
-                                    class="btn btn-secondary btn-sm">Assign Issue</button>
-                                <a target="_blank" *ngIf="!isAuthed && m.issue == null"
-                                    [attr.href]="friendlyReport(m)"
-                                    class="btn btn-secondary btn-sm">Report</a>
+                                    class="btn btn-secondary btn-sm ml-1">Assign</button>
                             </div>
                         </div>
                         <div *ngSwitchCase="modificationType.IconModified" class="d-flex flex-row">
@@ -141,10 +134,9 @@
                                 </svg>
                             </a>
                             <div class="text">
-                                <span>Icon
-                                    <code>{{m.icon.name}}</code> modified.</span>
+                                <span><code>{{m.icon.name}}</code> modified.</span>
                                 <small>
-                                  at {{friendlyTime(m.date)}} by {{m.user.name}}
+                                  {{friendlyTime(m.date)}} by {{m.user.name}}
                                   <span *ngIf="m.version && m.version.major != null">
                                     | v{{m.version.major}}.{{m.version.minor}}.{{m.version.patch}}
                                   </span>
@@ -158,10 +150,7 @@
                                     #{{m.issue}}
                                 </a>
                                 <button *ngIf="isAuthed" (click)="assignIssue(m)"
-                                    class="btn btn-secondary btn-sm">Assign Issue</button>
-                                <a target="_blank" *ngIf="!isAuthed && m.issue == null"
-                                    [attr.href]="friendlyReport(m)"
-                                    class="btn btn-secondary btn-sm">Report</a>
+                                    class="btn btn-secondary btn-sm ml-1">Assign</button>
                             </div>
                         </div>
                         <div *ngSwitchCase="modificationType.IconDeleted" class="d-flex flex-row">
@@ -179,10 +168,9 @@
                                 </svg>
                             </a>
                             <div class="text">
-                                <span>Icon Deleted
-                                    <code>{{m.icon.name}}</code> <span [innerHtml]="m.text"></span></span>
+                                <span>Deleted <code>{{m.icon.name}}</code>.</span>
                                 <small>
-                                  at {{friendlyTime(m.date)}} by {{m.user.name}}
+                                  {{friendlyTime(m.date)}} by {{m.user.name}}
                                   <span *ngIf="m.version && m.version.major != null">
                                     | v{{m.version.major}}.{{m.version.minor}}.{{m.version.patch}}
                                   </span>
@@ -196,10 +184,7 @@
                                     #{{m.issue}}
                                 </a>
                                 <button *ngIf="isAuthed" (click)="assignIssue(m)"
-                                    class="btn btn-secondary btn-sm">Assign Issue</button>
-                                <a target="_blank" *ngIf="!isAuthed && m.issue == null"
-                                    [attr.href]="friendlyReport(m)"
-                                    class="btn btn-secondary btn-sm">Report</a>
+                                    class="btn btn-secondary btn-sm ml-1">Assign</button>
                             </div>
                         </div>
                         <div *ngSwitchCase="modificationType.IconAliasCreated" class="d-flex flex-row">
@@ -217,12 +202,12 @@
                                 </svg>
                             </a>
                             <div class="text">
-                                <span>Added alias
-                                    <code>{{m.text}}</code> to icon
-                                    <code>{{m.icon.name}}</code>
+                                <span>Alias
+                                    <code>{{m.text}}</code> added to
+                                    <code>{{m.icon.name}}</code>.
                                 </span>
                                 <small>
-                                  at {{friendlyTime(m.date)}} by {{m.user.name}}
+                                  {{friendlyTime(m.date)}} by {{m.user.name}}
                                   <span *ngIf="m.version && m.version.major != null">
                                     | v{{m.version.major}}.{{m.version.minor}}.{{m.version.patch}}
                                   </span>
@@ -236,10 +221,7 @@
                                     #{{m.issue}}
                                 </a>
                                 <button *ngIf="isAuthed" (click)="assignIssue(m)"
-                                    class="btn btn-secondary btn-sm">Assign Issue</button>
-                                <a target="_blank" *ngIf="!isAuthed && m.issue == null"
-                                    [attr.href]="friendlyReport(m)"
-                                    class="btn btn-secondary btn-sm">Report</a>
+                                    class="btn btn-secondary btn-sm ml-1">Assign</button>
                             </div>
                         </div>
                     </div>

@@ -146,10 +146,6 @@ export class AdminHistoryPageComponent {
     return str.replace(' ', '-');
   }
 
-  friendlyReport (m: Modification) {
-    return 'https://github.com/Templarian/MaterialDesign/issues/new?title=History&body=Reason%3A%0D%0A%0D%0A%0D%0A%5BView+History+Item%5D%28http%3A%2F%2Fmaterialdesignicons.com%2Fhistory%2F' + m.id + '%29';
-  }
-  
   async selectPackage() {
     await this.toggle();
   }
