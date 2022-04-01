@@ -11,8 +11,7 @@
                 <h2>Changes on {{date.date}}</h2>
                 <div class="container-fluid history">
                     <div class="history-item" *ngFor="let m of date.modifications" [ngSwitch]="m.modificationId" [ngClass]="getClassName(m.modificationId)">
-                        <div *ngSwitchCase="modificationType.News">
-                            
+                        <div *ngSwitchCase="modificationType.News" class="d-flex flex-row">
                             <a class="photo" routerLink="/contributor/{{friendlyUrl(m.user.name)}}" [ngbTooltip]="user" [placement]="'right'">
                                 <mdi-user-photo [userId]="m.user.id"></mdi-user-photo>
                             </a>
@@ -26,7 +25,7 @@
                                 </span>
                             </div>
                         </div>
-                        <div *ngSwitchCase="modificationType.WebfontPublished">
+                        <div *ngSwitchCase="modificationType.WebfontPublished" class="d-flex flex-row">
                             <ng-template #user>{{m.user.name}}
                                 <br/>
                                 <small>@{{m.user.github}}</small>
@@ -44,7 +43,7 @@
                                 </span>
                             </div>
                         </div>
-                        <div *ngSwitchCase="modificationType.IconCreated">
+                        <div *ngSwitchCase="modificationType.IconCreated" class="d-flex flex-row">
                             <ng-template #user>{{m.user.name}}
                                 <br/>
                                 <small>@{{m.user.github}}</small>
@@ -61,14 +60,14 @@
                             <div class="text">
                                 <span>Icon
                                     <code>{{m.icon.name}}</code> created.</span>
-                                <small>at {{friendlyTime(m.date)}} by {{m.user.name}}</small>
+                                <small>
+                                  at {{friendlyTime(m.date)}} by {{m.user.name}}
+                                  <span *ngIf="m.version && m.version.major != null">
+                                    | v{{m.version.major}}.{{m.version.minor}}.{{m.version.patch}}
+                                  </span>
+                                </small>
                             </div>
                             <div class="actions">
-                                <span class="version" *ngIf="m.version && m.version.major != null">
-                                    <span>
-                                        v{{m.version.major}}.{{m.version.minor}}.{{m.version.patch}}
-                                    </span>
-                                </span>
                                 <a class="btn btn-sm btn-issue" *ngIf="m.issue != null"
                                     [ngbTooltip]="'GitHub Issue'"
                                     target="_blank"
@@ -82,7 +81,7 @@
                                     class="btn btn-secondary btn-sm">Report</a>
                             </div>
                         </div>
-                        <div *ngSwitchCase="modificationType.IconRenamed">
+                        <div *ngSwitchCase="modificationType.IconRenamed" class="d-flex flex-row">
                             <ng-template #user>{{m.user.name}}
                                 <br/>
                                 <small>@{{m.user.github}}</small>
@@ -101,14 +100,14 @@
                                     <code class="name-before">{{m.iconNameBefore}}</code> renamed to
                                     <code class="name-after">{{m.iconNameAfter}}</code>
                                 </span>
-                                <small>at {{friendlyTime(m.date)}} by {{m.user.name}}</small>
+                                <small>
+                                  at {{friendlyTime(m.date)}} by {{m.user.name}}
+                                  <span *ngIf="m.version && m.version.major != null">
+                                    | v{{m.version.major}}.{{m.version.minor}}.{{m.version.patch}}
+                                  </span>
+                                </small>
                             </div>
                             <div class="actions">
-                                <span class="version" *ngIf="m.version && m.version.major != null">
-                                    <span>
-                                        v{{m.version.major}}.{{m.version.minor}}.{{m.version.patch}}
-                                    </span>
-                                </span>
                                 <a class="btn btn-sm btn-issue" *ngIf="m.issue != null"
                                     [ngbTooltip]="'GitHub Issue'"
                                     target="_blank"
@@ -122,7 +121,7 @@
                                     class="btn btn-secondary btn-sm">Report</a>
                             </div>
                         </div>
-                        <div *ngSwitchCase="modificationType.IconModified">
+                        <div *ngSwitchCase="modificationType.IconModified" class="d-flex flex-row">
                             <ng-template #user>{{m.user.name}}
                                 <br/>
                                 <small>@{{m.user.github}}</small>
@@ -144,14 +143,14 @@
                             <div class="text">
                                 <span>Icon
                                     <code>{{m.icon.name}}</code> Modified</span>
-                                <small>at {{friendlyTime(m.date)}} by {{m.user.name}}</small>
+                                <small>
+                                  at {{friendlyTime(m.date)}} by {{m.user.name}}
+                                  <span *ngIf="m.version && m.version.major != null">
+                                    | v{{m.version.major}}.{{m.version.minor}}.{{m.version.patch}}
+                                  </span>
+                                </small>
                             </div>
                             <div class="actions">
-                                <span class="version" *ngIf="m.version && m.version.major != null">
-                                    <span>
-                                        v{{m.version.major}}.{{m.version.minor}}.{{m.version.patch}}
-                                    </span>
-                                </span>
                                 <a class="btn btn-sm btn-issue" *ngIf="m.issue != null"
                                     [ngbTooltip]="'GitHub Issue'"
                                     target="_blank"
@@ -165,7 +164,7 @@
                                     class="btn btn-secondary btn-sm">Report</a>
                             </div>
                         </div>
-                        <div *ngSwitchCase="modificationType.IconDeleted">
+                        <div *ngSwitchCase="modificationType.IconDeleted" class="d-flex flex-row">
                             <ng-template #user>{{m.user.name}}
                                 <br/>
                                 <small>@{{m.user.github}}</small>
@@ -182,14 +181,14 @@
                             <div class="text">
                                 <span>Icon Deleted
                                     <code>{{m.icon.name}}</code> <span [innerHtml]="m.text"></span></span>
-                                <small>at {{friendlyTime(m.date)}} by {{m.user.name}}</small>
+                                <small>
+                                  at {{friendlyTime(m.date)}} by {{m.user.name}}
+                                  <span *ngIf="m.version && m.version.major != null">
+                                    | v{{m.version.major}}.{{m.version.minor}}.{{m.version.patch}}
+                                  </span>
+                                </small>
                             </div>
                             <div class="actions">
-                                <span class="version" *ngIf="m.version && m.version.major != null">
-                                    <span>
-                                        v{{m.version.major}}.{{m.version.minor}}.{{m.version.patch}}
-                                    </span>
-                                </span>
                                 <a class="btn btn-sm btn-issue" *ngIf="m.issue != null"
                                     [ngbTooltip]="'GitHub Issue'"
                                     target="_blank"
@@ -203,7 +202,7 @@
                                     class="btn btn-secondary btn-sm">Report</a>
                             </div>
                         </div>
-                        <div *ngSwitchCase="modificationType.IconAliasCreated">
+                        <div *ngSwitchCase="modificationType.IconAliasCreated" class="d-flex flex-row">
                             <ng-template #user>{{m.user.name}}
                                 <br/>
                                 <small>@{{m.user.github}}</small>
@@ -222,14 +221,14 @@
                                     <code>{{m.text}}</code> to icon
                                     <code>{{m.icon.name}}</code>
                                 </span>
-                                <small>at {{friendlyTime(m.date)}} by {{m.user.name}}</small>
+                                <small>
+                                  at {{friendlyTime(m.date)}} by {{m.user.name}}
+                                  <span *ngIf="m.version && m.version.major != null">
+                                    | v{{m.version.major}}.{{m.version.minor}}.{{m.version.patch}}
+                                  </span>
+                                </small>
                             </div>
                             <div class="actions">
-                                <span class="version" *ngIf="m.version && m.version.major != null">
-                                    <span>
-                                        v{{m.version.major}}.{{m.version.minor}}.{{m.version.patch}}
-                                    </span>
-                                </span>
                                 <a class="btn btn-sm btn-issue" *ngIf="m.issue != null"
                                     [ngbTooltip]="'GitHub Issue'"
                                     target="_blank"
