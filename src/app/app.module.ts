@@ -63,6 +63,7 @@ import { AdminSheetPageComponent } from 'app/admin/sheetPage/sheetPage.component
 import { AdminBasePageComponent } from 'app/admin/basePage/basePage.component';
 import { AdminTagPageComponent } from 'app/admin/tagPage/tagPage.component';
 import { AdminHistoryPageComponent } from 'app/admin/historyPage/historyPage.component';
+import { AdminBulkEditPageComponent } from 'app/admin/bulkEditPage/bulkEditPage.component';
 import { AdminIndexeddbPageComponent } from 'app/admin/indexeddbPage/indexeddbPage.component';
 import { AdminReleasePageComponent } from './admin/releasePage/releasePage.component';
 import { AdminAssignIssueModal } from './admin/historyPage/assignIssueModal/assignIssueModal.component';
@@ -476,6 +477,10 @@ const appRoutes: Routes = [
         component: AdminHistoryPageComponent
       },
       {
+        path: 'bulkedit',
+        component: AdminBulkEditPageComponent
+      },
+      {
         path: 'indexeddb',
         component: AdminIndexeddbPageComponent
       },
@@ -528,6 +533,7 @@ const appRoutes: Routes = [
     AdminUsersPageComponent,
     AdminTagPageComponent,
     AdminHistoryPageComponent,
+    AdminBulkEditPageComponent,
     AdminIndexeddbPageComponent,
     AdminReleasePageComponent,
     NotFoundPageComponent,

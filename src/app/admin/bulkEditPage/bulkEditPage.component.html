@@ -1,0 +1,57 @@
+<mdi-banner
+  title="Bulk Edit"
+  icon="pencil-box-multiple"
+  adminReturn="true"
+  [carbon]="false"
+></mdi-banner>
+<div class="container">
+  <div class="card">
+    <div class="col-md-12 p-4">
+      <div class="mb-2">
+        <label>
+          <select [(ngModel)]="selectedPackage" class="custom-select">
+            <option *ngFor="let p of packages" [ngValue]="p">{{p.name}}</option>
+          </select>
+        </label>
+      </div>
+      <table class="table table-sm table-striped table-hover">
+        <thead>
+          <tr>
+            <th scope="col" class="border-top-0"></th>
+            <th scope="col" class="border-top-0">Icon</th>
+            <th scope="col" class="border-top-0">Base</th>
+            <th scope="col" class="border-top-0">Styles</th>
+            <th scope="col" class="border-top-0">Aliases</th>
+            <th scope="col" class="border-top-0">Tags</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let icon of displayedIcons" [ngValue]="icon">
+            <td>[x]</td>
+            <td>
+              <svg viewBox="0 0 24 24" style="width: 1.5rem;height: 1.5rem;margin-right: 0.1rem">
+                <path [attr.d]="icon.data" fill="#222"/>
+              </svg>
+              {{icon.name}}
+            </td>
+            <td>
+              <svg viewBox="0 0 24 24" style="width: 1.5rem;height: 1.5rem;margin-right: 0.1rem">
+                <path [attr.d]="icon.baseIcon.data" fill="#222"/>
+              </svg>
+              {{icon.baseIcon.name}}
+            </td>
+            <td>
+              {{icon.styles}}
+            </td>
+            <td>
+              {{icon.friendlyAliases}}
+            </td>
+            <td>
+              {{icon.tags}}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

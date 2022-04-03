@@ -1,82 +1,162 @@
 [
   {
+    "id": "58f4dc33-d60e-11e8-a666-94188269ec50",
+    "name": "account",
+    "count": 22
+  },
+  {
     "id": "e526737f-d404-11e8-a666-94188269ec50",
     "name": "alert",
-    "count": 0
+    "count": 93
   },
   {
     "id": "e5267a03-d404-11e8-a666-94188269ec50",
     "name": "arrow",
-    "count": 0
+    "count": 141
+  },
+  {
+    "id": "2a7bc823-5a05-11eb-89b8-1209440c2141",
+    "name": "badge",
+    "count": 8
   },
   {
     "id": "d3b6ec52-d404-11e8-a666-94188269ec50",
     "name": "bold",
-    "count": 0
+    "count": 48
+  },
+  {
+    "id": "da00c1bd-d57c-11e8-a666-94188269ec50",
+    "name": "box",
+    "count": 182
+  },
+  {
+    "id": "ec42631f-0b9c-11ec-89b8-1209440c2141",
+    "name": "cancel",
+    "count": 8
+  },
+  {
+    "id": "bdaf5543-d5ae-11e8-a666-94188269ec50",
+    "name": "check",
+    "count": 95
   },
   {
     "id": "e1aa40dd-d408-11e8-a666-94188269ec50",
     "name": "circle",
-    "count": 1
+    "count": 170
+  },
+  {
+    "id": "1437c3e3-d665-11e8-a666-94188269ec50",
+    "name": "clock",
+    "count": 38
+  },
+  {
+    "id": "303dfb49-168b-11ec-89b8-1209440c2141",
+    "name": "cog",
+    "count": 9
+  },
+  {
+    "id": "68c30be1-d60e-11e8-a666-94188269ec50",
+    "name": "edit",
+    "count": 35
+  },
+  {
+    "id": "293cc445-168b-11ec-89b8-1209440c2141",
+    "name": "eye",
+    "count": 2
+  },
+  {
+    "id": "fb866975-d665-11e8-a666-94188269ec50",
+    "name": "heart",
+    "count": 10
+  },
+  {
+    "id": "a5af4bcb-d667-11e8-a666-94188269ec50",
+    "name": "key",
+    "count": 8
+  },
+  {
+    "id": "68c30598-d60e-11e8-a666-94188269ec50",
+    "name": "lock",
+    "count": 69
+  },
+  {
+    "id": "e47378e7-0b9c-11ec-89b8-1209440c2141",
+    "name": "marker",
+    "count": 13
   },
   {
     "id": "fd76793f-d404-11e8-a666-94188269ec50",
     "name": "minus",
-    "count": 0
+    "count": 114
   },
   {
     "id": "1599efa7-d405-11e8-a666-94188269ec50",
     "name": "multiple",
-    "count": 0
+    "count": 125
   },
   {
     "id": "f15c647e-d404-11e8-a666-94188269ec50",
     "name": "network",
-    "count": 0
+    "count": 19
   },
   {
     "id": "bb5d67eb-d404-11e8-a666-94188269ec50",
     "name": "off",
-    "count": 0
+    "count": 264
   },
   {
     "id": "bb5d615c-d404-11e8-a666-94188269ec50",
     "name": "outline",
-    "count": 1
+    "count": 1225
   },
   {
     "id": "fd767237-d404-11e8-a666-94188269ec50",
     "name": "plus",
-    "count": 0
+    "count": 143
   },
   {
     "id": "1599e8d2-d405-11e8-a666-94188269ec50",
     "name": "question",
-    "count": 0
+    "count": 17
+  },
+  {
+    "id": "d8851b49-0b9c-11ec-89b8-1209440c2141",
+    "name": "refresh",
+    "count": 12
   },
   {
     "id": "08af8e5f-d405-11e8-a666-94188269ec50",
     "name": "remove",
-    "count": 0
+    "count": 113
   },
   {
     "id": "08af95d5-d405-11e8-a666-94188269ec50",
     "name": "search",
-    "count": 0
+    "count": 28
   },
   {
     "id": "f15c6be2-d404-11e8-a666-94188269ec50",
     "name": "settings",
-    "count": 0
+    "count": 48
+  },
+  {
+    "id": "0e2dc65b-d666-11e8-a666-94188269ec50",
+    "name": "star",
+    "count": 23
+  },
+  {
+    "id": "c46c5f62-0b9c-11ec-89b8-1209440c2141",
+    "name": "sync",
+    "count": 14
   },
   {
     "id": "d3b6f23d-d404-11e8-a666-94188269ec50",
     "name": "thick",
-    "count": 0
+    "count": 8
   },
   {
     "id": "1b1a5026-d405-11e8-a666-94188269ec50",
     "name": "variant",
-    "count": 0
+    "count": 742
   }
 ]
