@@ -5,13 +5,16 @@ import { Observable } from 'rxjs/Observable';
 @Injectable()
 export class MockInterceptor implements HttpInterceptor {
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    let isMock = window.location.href.match(/localhost/) !== null
+    const isMock = window.location.href.match(/localhost/) !== null
       && req.url.match(/^\/api/) != null;
     if (isMock) {
-      console.info(req.urlWithParams);
-      console.info(req.body);
-      let method = req.method.toLowerCase();
-      let mockReq = req.clone({
+      console.log({
+        url: req.url,
+        urlWithParams: req.urlWithParams,
+        body: req.body
+      });
+      const method = req.method.toLowerCase();
+      const mockReq = req.clone({
         url: req.url + `/mock.${method}.json`,
         method: 'GET',
         params: new HttpParams()

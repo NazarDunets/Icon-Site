@@ -53,6 +53,14 @@
                   "with": "src/environments/environment.prod.ts"
                 }
               ]
+            },
+            "devapi": {
+              "fileReplacements": [
+                {
+                  "replace": "src/app/shared/interceptor/mock.interceptor.ts",
+                  "with": "src/app/shared/interceptor/devapi.interceptor.ts"
+                }
+              ]
             }
           }
         },
@@ -64,6 +72,9 @@
           "configurations": {
             "production": {
               "browserTarget": "materialdesign-site:build:production"
+            },
+            "devapi": {
+              "browserTarget": "materialdesign-site:build:devapi"
             }
           }
         },
