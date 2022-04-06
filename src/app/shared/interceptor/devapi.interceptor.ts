@@ -12,7 +12,7 @@ export class MockInterceptor implements HttpInterceptor {
     });
     const mockReq = req.clone({
       url: `http://localhost:9080${req.url}`,
-      method: 'GET',
+      method: req.method,
       params: new HttpParams()
     });
     return next.handle(mockReq);
