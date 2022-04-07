@@ -59,6 +59,10 @@
                 {
                   "replace": "src/app/shared/interceptor/mock.interceptor.ts",
                   "with": "src/app/shared/interceptor/devapi.interceptor.ts"
+                },
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.devapi.ts"
                 }
               ]
             }

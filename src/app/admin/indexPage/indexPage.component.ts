@@ -15,7 +15,7 @@ export class AdminIndexPageComponent {
     private loginService: LoginService
   ) {}
 
-  public user: User = null;
+  public user: User = new User();
 
   async ngOnInit () {
     await this.loginService.isAuthed();
