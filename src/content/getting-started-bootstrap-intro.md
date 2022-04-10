@@ -18,7 +18,7 @@ tab Install
     <pre><code>npm install @mdi/font</code></pre>
   </div>
 </div>
-<blockquote>The CDN is sponsored by <a href="https://www.maxcdn.com/open-source/">MaxCDN</a>. This project could not exist without their support.</blockquote>
+<blockquote>The CDN is sponsored by <a href="https://www.jsdelivr.com/">jsDelivr</a>. This project could not exist without their support.</blockquote>
 
 /tab
 tab Helper CSS
