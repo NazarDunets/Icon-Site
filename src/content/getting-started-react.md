@@ -6,7 +6,7 @@ Material Design Icons can be used in React with a custom component or with the o
 npm install @mdi/react @mdi/js
 ```
 
-<a href="https://templarian.github.io/@mdi/react/" class="button">icon:teach Demo</a>
+<a href="https://templarian.github.io/@mdi/react/" class="button">icon:human-male-board Demo</a>
 <a href="https://github.com/Templarian/MaterialDesign-React" class="button">icon:github MaterialDesign-React on GitHub</a>
 <a href="https://marketplace.visualstudio.com/items?itemName=lukas-tr.materialdesignicons-intellisense" class="button">icon:microsoft-visual-studio-code VS Code Extension</a>
 
