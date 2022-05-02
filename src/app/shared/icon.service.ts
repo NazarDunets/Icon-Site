@@ -176,6 +176,11 @@ export class IconService {
     if (audit.issue) { body.modification = { issue: audit.issue }; }
     if (audit.fontVersion) { body.fontVersion = audit.fontVersion; }
     let res = await this.http.post<Icon>('/api/admin/icon', body).toPromise();
+
+    if (res.error) {
+      throw res;
+    }
+
     return new Icon().from(res);
   }
 
@@ -218,6 +223,11 @@ export class IconService {
     if (user) { body.user = { id: user.id }};
     if (audit.fontVersion) { body.fontVersion = audit.fontVersion; }
     let res = await this.http.post<Icon>('/api/admin/icon/name', body).toPromise();
+
+    if (res.error) {
+      throw res;
+    }
+
     return new Icon().from(res);
   }
 

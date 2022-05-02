@@ -21,6 +21,7 @@ export class Icon extends IconHelpers {
   public deprecated: boolean = false;
   public codepoint: number = null;
   public fontIcon: any = null;
+  public error: any = null;
 
   constructor(name?: string, data?: string) {
     super();

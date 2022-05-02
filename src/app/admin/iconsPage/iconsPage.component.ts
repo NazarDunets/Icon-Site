@@ -96,7 +96,7 @@ export class AdminIconsPageComponent {
   }
 
   selectFontVersion() {
-    
+
   }
 
   async selectUser() {
@@ -153,7 +153,7 @@ export class AdminIconsPageComponent {
         await this.selectIcon();
         window.scrollTo({ top: 0, behavior: 'smooth' });
       } catch (ee) {
-        alert('Failed to add icon... not sure why.');
+        alert(`Failed to add icon... ${ee.message || 'not sure why.'}`);
       }
     }
   }
@@ -269,7 +269,7 @@ export class AdminIconsPageComponent {
     return true;
   }
 
-  pathChange(e) {
+  pathChange() {
     console.log(this.newIcon.data);
   }
 
@@ -278,9 +278,13 @@ export class AdminIconsPageComponent {
   }
 
   async rename(){
-    this.selectedIcon = await this.iconService.rename(this.editIcon, this.selectedUser, {
-      fontVersion: this.selectedFontVersion
-    });
+    try {
+      this.selectedIcon = await this.iconService.rename(this.editIcon, this.selectedUser, {
+        fontVersion: this.selectedFontVersion
+      });
+    } catch (ee) {
+      alert(`Failed to rename icon... ${ee.message || 'not sure why.'}`);
+    }
   }
 
   async assignUser() {
