@@ -22,6 +22,7 @@
       <table class="table table-sm table-striped table-hover">
         <thead>
           <tr>
+            <th scope="col" class="border-top-0"></th>
             <th scope="col" class="border-top-0">GitHub</th>
             <th scope="col" class="border-top-0">Name</th>
             <th scope="col" class="border-top-0"></th>
@@ -29,6 +30,11 @@
         </thead>
         <tbody>
           <tr *ngFor="let u of users" [ngValue]="u">
+            <td class="align-middle text-center">
+              <span ngbTooltip="Core Contributor">
+                <mdi-icon *ngIf="!!u.core" name="star"></mdi-icon>
+              </span>
+            </td>
             <td class="align-middle">
               <a
                 *ngIf="!!u.github"
@@ -41,7 +47,9 @@
             <td class="align-middle">{{u.name}}</td>
             <td>
               <button class="btn btn-sm" (click)="editUser(u)">
-                <mdi-icon name="pencil"></mdi-icon>
+                <span [ngbTooltip]="'Edit ' + u.github">
+                  <mdi-icon name="pencil"></mdi-icon>
+                </span>
               </button>
             </td>
           </tr>
