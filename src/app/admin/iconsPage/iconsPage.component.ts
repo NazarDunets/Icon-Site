@@ -82,13 +82,17 @@ export class AdminIconsPageComponent {
   }
 
   async selectPackage() {
-    // User Select
-    this.users = await this.userService.getAdminUsers(this.selectedPackage.id);
-    this.selectedUser = this.users[0];
-    // Icons Search component is smart now
-    // this.icons = await this.iconService.getAdminIcons(this.selectedPackage.id);
-    // this.selectedIcon = this.icons[0];
     this.styles = await this.iconService.getStyles(this.selectedPackage.id);
+
+    if (this.isBrandMode()) {
+      // Reselect the current user
+      const currentUser = await this.loginService.getAdmin();
+      this.selectedUser = this.users.find(u => u.id === currentUser.id);
+    }
+  }
+
+  isBrandMode () {
+    return this.selectedPackage.id === '16a00a9f-aa64-11ec-89b8-1209440c2141';
   }
 
   selectFont() {
@@ -189,6 +193,10 @@ export class AdminIconsPageComponent {
   }
 
   autofillDescription() {
+    if (this.isBrandMode()) {
+      return;
+    }
+
     const currentName = this.newIcon?.name?.trim();
     const currentDesc = this.newIcon?.description?.trim();
     if (currentDesc || !currentName) {

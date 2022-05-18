@@ -1,0 +1,26 @@
+[
+  {
+    "id": "D051337E-BC7E-11E5-A4E9-842B2B6CFE1B",
+    "name": "Pictogrammers Brand",
+    "description": "Pictorgrammers Brand Library",
+    "prefix": "brands",
+    "fontName": "Pictogrammers Brands",
+    "fileName": "pictogrammersbrands",
+    "fontFamily": "pictogrammersbrands",
+    "fontWeight": "normal",
+    "price": null,
+    "iconCount": 1,
+    "versions": [
+      {
+        "id": "95C44106-BD73-11E5-A4E9-842B2B6CFE1B",
+        "major": 1,
+        "minor": 0,
+        "patch": 0,
+        "description": "Initial release.",
+        "date": "2022-05-18 09:28:05",
+        "released": true,
+        "iconCount": 1
+      }
+    ]
+  }
+]

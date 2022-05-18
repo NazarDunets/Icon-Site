@@ -37,7 +37,7 @@
         <label>
           <span class="d-block">On Behalf of User</span>
           <select
-            [disabled]="newIcon !== null"
+            [disabled]="newIcon !== null || isBrandMode()"
             [(ngModel)]="selectedUser" (change)="selectUser()" class="custom-select">
             <option *ngFor="let u of users" [ngValue]="u">{{u.github}} ({{u.iconCount}})</option>
           </select>
@@ -129,7 +129,10 @@
                   [disabled]="selectedIcon.name == editIcon.name || !editIcon.validName()">Rename</button>
               </div>
             </div>
-            <div class="form-group">
+            <div
+              class="form-group"
+              *ngIf="!isBrandMode()"
+            >
               <label>Author</label>
               <div style="border: 1px solid #DDD;border-radius: 0.25rem;">
                 <div style="margin:0.5rem;">
@@ -141,7 +144,10 @@
                 </div>
               </div>
             </div>
-            <div class="form-group">
+            <div
+              class="form-group"
+              *ngIf="!isBrandMode()"
+            >
               <label>Base Icon</label>
               <div *ngIf="loading">Loading...</div>
               <div *ngIf="!loading" class="base-icon-wrap">
@@ -236,7 +242,10 @@
                 </button>
               </span>
             </div>
-            <div class="form-group">
+            <div
+              class="form-group"
+              *ngIf="!isBrandMode()"
+            >
               <div>
                 <label>Tags</label>
               </div>
@@ -253,7 +262,8 @@
               </span>
             </div>
             <div class="form-group form-group-edit">
-              <label>Description</label>
+              <label *ngIf="!isBrandMode()">Description</label>
+              <label *ngIf="isBrandMode()">Brand License</label>
               <textarea class="form-control" name="description" rows="4"
                 [(ngModel)]="editIcon.description"></textarea>
               <div>
@@ -345,7 +355,10 @@
             </div>
           </div>
         </div>
-        <div class="form-group mt-3">
+        <div
+          class="form-group mt-3"
+          *ngIf="!isBrandMode()"
+        >
           <label>Styles</label>
           <ul class="style-checkboxes">
             <li *ngFor="let style of styles" [ngClass]="{ 'active': inStyle(style.id) }">
@@ -394,12 +407,27 @@
             </div>
             <div class="col-md-8">
               <div class="card">
-                <div class="card-body">
+                <div
+                  class="card-body"
+                  *ngIf="!isBrandMode()"
+                >
                   <p>Read the naming guidelines. Ensure the order of the name matches existing conventions.</p>
                   <p class="mb-0">
                     <a class="btn btn-outline-secondary" target="_blank" href="/contribute/icon-naming" tabindex="-1">
                       <mdi-icon name="file-document-box-outline"></mdi-icon>
                       Naming Guidelines
+                    </a>
+                  </p>
+                </div>
+                <div
+                  class="card-body"
+                  *ngIf="isBrandMode()"
+                >
+                  <p>Read the brand naming guidelines.</p>
+                  <p class="mb-0">
+                    <a class="btn btn-outline-secondary" target="_blank" href="/contribute/brand-icon-naming" tabindex="-1">
+                      <mdi-icon name="file-document-box-outline"></mdi-icon>
+                      Brand Naming Guidelines
                     </a>
                   </p>
                 </div>
@@ -416,7 +444,8 @@
             <div class="row">
               <div class="col-md-4">
                 <div class="form-group">
-                  <label>Description</label>
+                  <label *ngIf="!isBrandMode()">Description</label>
+                  <label *ngIf="isBrandMode()">Brand License</label>
                   <textarea class="form-control" name="description"
                     rows="5"
                     [(ngModel)]="newIcon.description"></textarea>
@@ -424,7 +453,10 @@
               </div>
               <div class="col-md-8">
                 <div class="card">
-                  <div class="card-body">
+                  <div
+                    class="card-body"
+                    *ngIf="!isBrandMode()"
+                  >
                     <p>Markdown <small>Description Supports Markdown</small></p>
                     <table class="table mb-0">
                       <tr>
@@ -443,6 +475,12 @@
                         <td><code>icon:account</code></td>
                       </tr>
                     </table>
+                  </div>
+                  <div
+                    class="card-body"
+                    *ngIf="isBrandMode()"
+                  >
+                    <p>Include the brand's license, copyright, and/or trademark information. If branding guidelines are available, include them as well.</p>
                   </div>
                 </div>
               </div>
@@ -465,7 +503,6 @@
                   (change)="pathChange()"
                   (click)="$event.target.select()"
                 ></textarea>
-                <!-- <div class="alert alert-danger mt-2">Invalid path data.</div> -->
               </div>
             </div>
             <div class="col-md-3">
