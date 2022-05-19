@@ -92,7 +92,7 @@ export class AdminIconsPageComponent {
   }
 
   isBrandMode () {
-    return this.selectedPackage.id === '16a00a9f-aa64-11ec-89b8-1209440c2141';
+    return this.selectedPackage?.id === '16a00a9f-aa64-11ec-89b8-1209440c2141';
   }
 
   selectFont() {

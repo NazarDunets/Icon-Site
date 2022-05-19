@@ -68,7 +68,7 @@
                     </a>
                 </div>
             </div>
-            <div class="col-sm-6" *ngIf="user.core">
+            <div class="col-sm-6" *ngIf="user?.core">
                 <div class="card">
                     <a class="card-horizontal" routerLink="/admin/release">
                         <mdi-icon name="archive-sync" size="2" class="card-img-left"></mdi-icon>
@@ -81,10 +81,10 @@
             </div>
         </div>
 
-        <div class="card-header mt-4 border-top" *ngIf="user.core">
+        <div class="card-header mt-4 border-top" *ngIf="user?.core">
             User Management
         </div>
-        <div class="row p-4" *ngIf="user.core">
+        <div class="row p-4" *ngIf="user?.core">
             <div class="col-sm-6">
                 <div class="card">
                     <a class="card-horizontal" href="/admin/users">
