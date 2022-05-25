@@ -43,10 +43,10 @@ As the `@mdi/svg` is also published it can be retrived from the CDN.
 
 GitHub is where we store all the NPM distribution repos. Each release is tagged so it's easy to view previous changes.
 
-- [MaterialDesign](https://github.com/Templarian/MaterialDesign) - Main Repo Synced Real-time
-- [MaterialDesign-SVG](https://github.com/Templarian/MaterialDesign-SVG) - SVG Versioned
-- [MaterialDesign-JS](https://github.com/Templarian/MaterialDesign-JS) - JS Versioned
-- [MaterialDesign-Webfont](https://github.com/Templarian/MaterialDesign-Webfont) - Webfont Versioned
+- [MaterialDesign](https://github.com/Pictogrammers/MaterialDesign) - Main Repo Synced Real-time
+- [MaterialDesign-SVG](https://github.com/Pictogrammers/MaterialDesign-SVG) - SVG Versioned
+- [MaterialDesign-JS](https://github.com/Pictogrammers/MaterialDesign-JS) - JS Versioned
+- [MaterialDesign-Webfont](https://github.com/Pictogrammers/MaterialDesign-Webfont) - Webfont Versioned
 
 ### Build Script
 

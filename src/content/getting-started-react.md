@@ -7,7 +7,7 @@ npm install @mdi/react @mdi/js
 ```
 
 <a href="https://templarian.github.io/@mdi/react/" class="button">icon:human-male-board Demo</a>
-<a href="https://github.com/Templarian/MaterialDesign-React" class="button">icon:github MaterialDesign-React on GitHub</a>
+<a href="https://github.com/Pictogrammers/MaterialDesign-React" class="button">icon:github MaterialDesign-React on GitHub</a>
 <a href="https://marketplace.visualstudio.com/items?itemName=lukas-tr.materialdesignicons-intellisense" class="button">icon:microsoft-visual-studio-code VS Code Extension</a>
 
 ## Usage
@@ -50,7 +50,7 @@ class App extends Component {
 | spin        | bool, number   | `false`        | `true = 2s`, `{spin}s` |
 
 <blockquote class="alert alert-info">
-  icon:information-outline Learn more about other features including the `Stack` component in the <a href="https://github.com/Templarian/MaterialDesign-React">Repo</a>.
+  icon:information-outline Learn more about other features including the `Stack` component in the <a href="https://github.com/Pictogrammers/MaterialDesign-React">Repo</a>.
 </blockquote>
 
 ## Styling

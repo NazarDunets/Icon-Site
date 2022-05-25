@@ -144,7 +144,7 @@
 ## Version 6.1.95
 
 - 281 New Icons
-- Read More: [#5409](https://github.com/Templarian/MaterialDesign/issues/5409)
+- Read More: [#5409](https://github.com/Pictogrammers/MaterialDesign/issues/5409)
 - Removed
   - `adobe-acrobat`
   - `adobe`

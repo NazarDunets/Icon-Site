@@ -1,5 +1,5 @@
 import { Component, Prop, Part } from '@mdi/element';
- 
+
 import template from "./pageIcon.html";
 import style from './pageIcon.css';
 
@@ -24,13 +24,13 @@ import { addTooltip } from '@mdi/components/mdi/tooltip/addTooltip';
 @Component({
   selector: 'site-page-icon',
   style,
-  template 
+  template
 })
 export default class SitePageIcon extends HTMLElement {
   @Prop() icons: Icon[] = [];
   @Prop() navigationItems: any[] = [];
   @Prop() name = '';
-  
+
   @Part() $header: HTMLHeadingElement;
   @Part() $loading: HTMLDivElement;
   @Part() $error: HTMLDivElement;
@@ -52,7 +52,7 @@ export default class SitePageIcon extends HTMLElement {
       return `Webfont index`;
     });
   }
-  
+
   render(changes) {
     if (changes.name && this.name) {
       this.$header.innerText = this.name;
@@ -93,7 +93,7 @@ export default class SitePageIcon extends HTMLElement {
       this.renderAliases(icon);
     }
   }
-  
+
   renderTags(icon) {
     icon.tags.forEach((tag) => {
       const li = document.createElement('li');
@@ -114,7 +114,7 @@ export default class SitePageIcon extends HTMLElement {
     const mdiIcon = document.createElement('mdi-icon') as MdiIcon;
     mdiIcon.path = 'M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M13,7H11V11H7V13H11V17H13V13H17V11H13V7Z';
     const title = `Tag "${icon.name}" with <tag>`;
-    a.href = `https://github.com/Templarian/MaterialDesign/issues/new?labels=Tag&template=5_tag.md&title=${title}`;
+    a.href = `https://github.com/Pictogrammers/MaterialDesign/issues/new?labels=Tag&template=5_tag.md&title=${title}`;
     a.appendChild(mdiIcon);
     li.appendChild(a);
     li.classList.add('add');
@@ -138,7 +138,7 @@ export default class SitePageIcon extends HTMLElement {
     const mdiIcon = document.createElement('mdi-icon') as MdiIcon;
     mdiIcon.path = 'M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M13,7H11V11H7V13H11V17H13V13H17V11H13V7Z';
     const title = `Alias "${icon.name}" with <alias>`;
-    a.href = `https://github.com/Templarian/MaterialDesign/issues/new?labels=Alias&template=4_alias.md&title=${title}`;
+    a.href = `https://github.com/Pictogrammers/MaterialDesign/issues/new?labels=Alias&template=4_alias.md&title=${title}`;
     a.appendChild(mdiIcon);
     li.appendChild(a);
     li.classList.add('add');

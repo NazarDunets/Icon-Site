@@ -9,6 +9,8 @@ import { LoginService } from 'app/admin/services/login.service';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { AdminAssignIssueModal } from 'app/admin/historyPage/assignIssueModal/assignIssueModal.component';
 
+// TODO: The base URL for the GitHub Issues needs to come from the Package metadata.
+
 @Component({
   selector: 'mdi-admin-history-page',
   templateUrl: './historyPage.component.html',

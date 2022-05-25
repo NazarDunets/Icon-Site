@@ -9,7 +9,7 @@ Similar to the icons this site is Open Source. Years ago when the project was sm
 | *CSS*      | Custom (CSS) | Bootstrap 4 (SASS) |
 | *Source* | [View](https://github.com/Pictogrammers/Icon-Site/tree/master/src/site) | [View](https://github.com/Pictogrammers/Icon-Site/tree/master/src) |
 
-> **Information:** Both are stored in the same repo, but the non-application logic web components are stored in a seperate repo [here](https://github.com/Templarian/MaterialDesign-Components/tree/master/src/mdi).
+> **Information:** Both are stored in the same repo, but the non-application logic web components are stored in a separate repo [here](https://github.com/Pictogrammers/MaterialDesign-Components/tree/master/src/mdi).
 
 ## Public Site
 
@@ -26,7 +26,7 @@ From the home page, icon pages, and documentation the public site can be edited.
 - `npm install`
 - `npm run start:site`
 
-All code relavant to the site is stored in `src/site`. Unless you need to modify a `mdi-*` Web Component. Those Web Components can be viewed [here](https://github.com/Templarian/MaterialDesign-Components).
+All code relavant to the site is stored in `src/site`. Unless you need to modify a `mdi-*` Web Component. Those Web Components can be viewed [here](https://github.com/Pictogrammers/MaterialDesign-Components).
 
 > **Information:** icon:comment-question Why 2 repos? The `mdi-*` Web Components are published as package on NPM `@mdi/components` for third parties to use. That repo is held to a higher code quality and testing strategy than the site.
 

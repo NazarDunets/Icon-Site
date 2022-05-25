@@ -1,6 +1,6 @@
 # Scripting with NodeJS Guide
 
-> **Goal:** Write a NodeJS script that takes the `@mdi/svg` [package](https://github.com/Templarian/MaterialDesign-SVG) and converts it into a easy to view `preview.html`.
+> **Goal:** Write a NodeJS script that takes the `@mdi/svg` [package](https://github.com/Pictogrammers/MaterialDesign-SVG) and converts it into a easy to view `preview.html`.
 
 This example uses the `meta.json` (explained below) and in the end generates a single `html` file.
 
@@ -95,7 +95,7 @@ The `@mdi/util` includes a few helper methods for working with the `@mdi/svg` pa
 - **`util.write(file, data)`** Write data to a file.
 - **`util.read(file)`** Read data from a file.
 
-View the [util.js](https://github.com/Templarian/MaterialDesign-Util/blob/master/util.js) to understand these utilities.
+View the [util.js](https://github.com/Pictogrammers/MaterialDesign-Util/blob/master/util.js) to understand these utilities.
 
 ## Update `package.json`
 

@@ -19,7 +19,7 @@ Step by step guides below outline the above ways to contribute.
 
 The easiest way to help is to suggest icons, all you need is a GitHub account.
 
-Simply visit the [issues](https://github.com/Templarian/MaterialDesign/issues) section of our repository and click "New issue", a template will guide you through the information we're looking for. Images can be pasted in comments to provide examples.
+Simply visit the [issues](https://github.com/Pictogrammers/MaterialDesign/issues) section of our repository and click "New issue", a template will guide you through the information we're looking for. Images can be pasted in comments to provide examples.
 
 The team will take a look at your issue as soon as possible and label it accordingly. We may ask you for more information on what exactly you want or even reject your suggestion entirely if we feel it's too specific, but don't let that put you off suggesting more icons in the future!
 
@@ -27,7 +27,7 @@ A member of the team or another designer should eventually reply with a designed
 
 ### Contribute Icons
 
-You may want to contribute an icon that you made yourself, that's great! Just create an [issue](https://github.com/Templarian/MaterialDesign/issues) on GitHub and we'll take a look. Make sure you follow the [Material Design guidelines](https://material.io/guidelines/style/icons.html#icons-system-icons) so you will have to make little to no revisions and hopefully it'll get added to the set!
+You may want to contribute an icon that you made yourself, that's great! Just create an [issue](https://github.com/Pictogrammers/MaterialDesign/issues) on GitHub and we'll take a look. Make sure you follow the [Material Design guidelines](https://material.io/guidelines/style/icons.html#icons-system-icons) so you will have to make little to no revisions and hopefully it'll get added to the set!
 
 If you need ideas for what to design you can always take a look at the currently open issues and reply with your design.
 
@@ -48,7 +48,7 @@ This [site](/contribute/site) is open source, from the documentation to the fron
 
 The Web Components for the public site are stored in a seperate repo and published to NPM.
 
-<a class="button" href="https://github.com/Templarian/MaterialDesign-Components/">icon:github View the Web Components on GitHub</a>
+<a class="button" href="https://github.com/Pictogrammers/MaterialDesign-Components/">icon:github View the Web Components on GitHub</a>
 
 All content is mostly stored in Markdown files and can be edited right from GitHub's editor.
 

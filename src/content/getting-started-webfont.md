@@ -118,7 +118,7 @@ The above files are also on the CDN: [View Latest](https://www.jsdelivr.com/pack
 The webfont can be built with the contents of the `@mdi/svg` and `@mdi/font-build`.
 
 ```bash
-# Extract https://github.com/Templarian/MaterialDesign-SVG/archive/master.zip
+# Extract https://github.com/Pictogrammers/MaterialDesign-SVG/archive/master.zip
 # Inside of the folder run
 npx @mdi/font-build
 # The /dist folder contains the generated files

@@ -8,7 +8,7 @@ As often happens in the [Ember](https://emberjs.com/) world, "there's an addon f
 ### `ember-mdi`
 
 Refer to the [addon's README.md](https://github.com/kaermorchen/ember-mdi#getting-started) for documentation.
-In short, it uses [`@mdi/svg`](https://github.com/Templarian/MaterialDesign-SVG) to make an `icons.svg` file in your application's build pipeline and provides a `mdi-icon` component for use in your templates.
+In short, it uses [`@mdi/svg`](https://github.com/Pictogrammers/MaterialDesign-SVG) to make an `icons.svg` file in your application's build pipeline and provides a `mdi-icon` component for use in your templates.
 
 ## WebFont
 

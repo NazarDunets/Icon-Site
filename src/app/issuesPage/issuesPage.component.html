@@ -5,7 +5,7 @@
             <div class="card">
                 <ul class="nav nav-tabs">
                     <li class="nav-item">
-                        <button class="nav-link" 
+                        <button class="nav-link"
                             [ngClass]="{'active': filter == null}"
                             (click)="load(null)">Issue Requests</button>
                     </li>
@@ -45,7 +45,7 @@
                     <tbody>
                         <tr *ngFor="let issue of issues; index as i">
                             <td>{{i+1}}</td>
-                            <td><a href="https://github.com/Templarian/MaterialDesign/issues/{{issue.number}}">#{{issue.number}}</a></td>
+                            <td><a href="https://github.com/Pictogrammers/MaterialDesign/issues/{{issue.number}}">#{{issue.number}}</a></td>
                             <td class="text-left">{{issue.title}}</td>
                             <td class="text-left">
                                 <span *ngIf="issue.status == 'Rejected'"
