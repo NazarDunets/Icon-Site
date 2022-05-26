@@ -1,5 +1,11 @@
 # Changelog
 
+## Version 6.7.96
+
+- 100 New Icons
+- Updated
+  - `church`
+  - `stadium`
 
 ## Version 6.6.96
 

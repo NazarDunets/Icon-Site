@@ -28,7 +28,7 @@ From the home page, icon pages, and documentation the public site can be edited.
 
 All code relavant to the site is stored in `src/site`. Unless you need to modify a `mdi-*` Web Component. Those Web Components can be viewed [here](https://github.com/Templarian/MaterialDesign-Components).
 
-> **Information:** icon:comment-question Why 2 repos? The `mdi-*` Web Components are published as package on NPM `@mdi/components` for third parties to use. That repo is held to a higher code quality and testing strategy than the site.
+> **Information:** icon:comment-question Why 2 repos? The `mdi-*` Web Components are published as package on NPM `@pictogrammers/components` for third parties to use. That repo is held to a higher code quality and testing strategy than the site.
 
 #### What Features are Wanted
 
