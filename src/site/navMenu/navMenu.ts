@@ -1,8 +1,8 @@
-import { Component, Prop, Part } from '@mdi/element';
+import { Component, Prop, Part } from '@pictogrammers/element';
  
 import template from "./navMenu.html";
 import style from './navMenu.css';
-import MdiIcon from '@mdi/components/mdi/icon';
+import MdiIcon from '@pictogrammers/components/pg/icon';
 
 const menuCategories = [
   'Guides',

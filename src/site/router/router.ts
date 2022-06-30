@@ -1,22 +1,22 @@
-import { Component, Prop, Part } from '@mdi/element';
+import { Component, Prop, Part } from '@pictogrammers/element';
 import { Router } from './../shared/router';
 import SiteNavDocs from './../navDocs/navDocs';
 import SiteNavMenu from './../navMenu/navMenu';
 import { navigationItems } from './constants';
 
-import '@mdi/components/mdi/annoy';
-import '@mdi/components/mdi/database';
-import '@mdi/components/mdi/icon';
-import '@mdi/components/mdi/header';
-import '@mdi/components/mdi/search';
-import '@mdi/components/mdi/tooltip';
-import MdiTooltip from '@mdi/components/mdi/tooltip';
-import MdiDatabase from '@mdi/components/mdi/database';
-import MdiSearch from '@mdi/components/mdi/search';
+import '@pictogrammers/components/pg/annoy';
+import '@pictogrammers/components/pg/database';
+import '@pictogrammers/components/pg/icon';
+import '@pictogrammers/components/pg/header';
+import '@pictogrammers/components/pg/search';
+import '@pictogrammers/components/pg/tooltip';
+import MdiTooltip from '@pictogrammers/components/pg/tooltip';
+import MdiDatabase from '@pictogrammers/components/pg/database';
+import MdiSearch from '@pictogrammers/components/pg/search';
 
 import template from "./router.html";
 import style from './router.css';
-import { http } from '@mdi/components/mdi/shared/http';
+import { http } from '@pictogrammers/components/pg/shared/http';
 
 @Component({
   selector: 'site-router',

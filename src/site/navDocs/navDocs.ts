@@ -1,8 +1,8 @@
-import { Component, Prop, Part } from '@mdi/element';
+import { Component, Prop, Part } from '@pictogrammers/element';
  
 import template from "./navDocs.html";
 import style from './navDocs.css';
-import MdiIcon from '@mdi/components/mdi/icon';
+import MdiIcon from '@pictogrammers/components/pg/icon';
 
 @Component({
   selector: 'site-nav-docs',

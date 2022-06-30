@@ -1,11 +1,11 @@
-import { Component, Prop, Part } from '@mdi/element';
+import { Component, Prop, Part } from '@pictogrammers/element';
 
 import template from "./pageHome.html";
 import style from './pageHome.css';
 
-import '@mdi/components/mdi/icon';
-import MdiIcon from '@mdi/components/mdi/icon';
-import { Icon } from '@mdi/components/mdi/shared/models/icon';
+import '@pictogrammers/components/pg/icon';
+import MdiIcon from '@pictogrammers/components/pg/icon';
+import { Icon } from '@pictogrammers/components/pg/shared/models/icon';
  
 @Component({
   selector: 'site-page-home',

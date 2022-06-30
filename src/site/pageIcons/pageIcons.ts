@@ -1,25 +1,25 @@
-import { Component, Prop, Part } from '@mdi/element';
+import { Component, Prop, Part } from '@pictogrammers/element';
  
 import template from "./pageIcons.html";
 import style from './pageIcons.css';
 
-import '@mdi/components/mdi/buttonLink';
-import '@mdi/components/mdi/scroll';
-import '@mdi/components/mdi/grid';
-import MdiGrid from '@mdi/components/mdi/grid';
-import '@mdi/components/mdi/inputTextIcon';
-import MdiInputTextIcon from '@mdi/components/mdi/inputTextIcon';
-import '@mdi/components/mdi/inputSelect';
-import MdiInputSelect from '@mdi/components/mdi/inputSelect';
-import '@mdi/components/mdi/inputUserSelect';
-import MdiInputUserSelect from '@mdi/components/mdi/inputUserSelect';
-import { Icon } from '@mdi/components/mdi/shared/models/icon';
-import { http } from '@mdi/components/mdi/shared/http';
-import { Tag } from '@mdi/components/mdi/shared/models/tag';
-import { User } from '@mdi/components/mdi/shared/models/user';
-import '@mdi/components/mdi/avatar';
-import MdiAvatar from '@mdi/components/mdi/avatar';
-import { addTooltip } from '@mdi/components/mdi/tooltip';
+import '@pictogrammers/components/pg/buttonLink';
+import '@pictogrammers/components/pg/scroll';
+import '@pictogrammers/components/pg/grid';
+import MdiGrid from '@pictogrammers/components/pg/grid';
+import '@pictogrammers/components/pg/inputTextIcon';
+import MdiInputTextIcon from '@pictogrammers/components/pg/inputTextIcon';
+import '@pictogrammers/components/pg/inputSelect';
+import MdiInputSelect from '@pictogrammers/components/pg/inputSelect';
+import '@pictogrammers/components/pg/inputUserSelect';
+import MdiInputUserSelect from '@pictogrammers/components/pg/inputUserSelect';
+import { Icon } from '@pictogrammers/components/pg/shared/models/icon';
+import { http } from '@pictogrammers/components/pg/shared/http';
+import { Tag } from '@pictogrammers/components/pg/shared/models/tag';
+import { User } from '@pictogrammers/components/pg/shared/models/user';
+import '@pictogrammers/components/pg/avatar';
+import MdiAvatar from '@pictogrammers/components/pg/avatar';
+import { addTooltip } from '@pictogrammers/components/pg/tooltip';
 
 @Component({
   selector: 'site-page-icons',

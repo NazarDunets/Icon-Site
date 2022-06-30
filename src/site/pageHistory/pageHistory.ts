@@ -1,19 +1,19 @@
-import { Component, Prop, Part } from '@mdi/element';
+import { Component, Prop, Part } from '@pictogrammers/element';
 
 import template from "./pageHistory.html";
 import style from './pageHistory.css';
 
-import { Icon } from '@mdi/components/mdi/shared/models/icon';
-import { Modification } from '@mdi/components/mdi/shared/models/modification';
-import { ModificationType } from '@mdi/components/mdi/shared/enums/modificationType';
-import { http } from '@mdi/components/mdi/shared/http';
-import '@mdi/components/mdi/card';
-import '@mdi/components/mdi/button';
-import MdiButton from '@mdi/components/mdi/button';
-import '@mdi/components/mdi/inputCheckList';
-import MdiInputCheckList from '@mdi/components/mdi/inputCheckList';
-import '@mdi/components/mdi/modification';
-import MdiModification from  '@mdi/components/mdi/modification';
+import { Icon } from '@pictogrammers/components/pg/shared/models/icon';
+import { Modification } from '@pictogrammers/components/pg/shared/models/modification';
+import { ModificationType } from '@pictogrammers/components/pg/shared/enums/modificationType';
+import { http } from '@pictogrammers/components/pg/shared/http';
+import '@pictogrammers/components/pg/card';
+import '@pictogrammers/components/pg/button';
+import MdiButton from '@pictogrammers/components/pg/button';
+import '@pictogrammers/components/pg/inputCheckList';
+import MdiInputCheckList from '@pictogrammers/components/pg/inputCheckList';
+import '@pictogrammers/components/pg/modification';
+import MdiModification from  '@pictogrammers/components/pg/modification';
 
 const NEWS = 'news';
 const ICON_CREATED = 'iconCreated';

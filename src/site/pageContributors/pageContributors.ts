@@ -1,13 +1,13 @@
-import { Component, Prop, Part } from '@mdi/element';
+import { Component, Prop, Part } from '@pictogrammers/element';
  
 import template from "./pageContributors.html";
 import style from './pageContributors.css';
 
-import { Icon } from '@mdi/components/mdi/shared/models/icon';
-import { http } from '@mdi/components/mdi/shared/http';
-import { User } from '@mdi/components/mdi/shared/models/user';
-import '@mdi/components/mdi/cardUser';
-import MdiCardUser from '@mdi/components/mdi/cardUser';
+import { Icon } from '@pictogrammers/components/pg/shared/models/icon';
+import { http } from '@pictogrammers/components/pg/shared/http';
+import { User } from '@pictogrammers/components/pg/shared/models/user';
+import '@pictogrammers/components/pg/cardUser';
+import MdiCardUser from '@pictogrammers/components/pg/cardUser';
 
 @Component({
   selector: 'site-page-contributors',

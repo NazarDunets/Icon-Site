@@ -1,9 +1,9 @@
-import { Component, Prop, Part } from '@mdi/element';
+import { Component, Prop, Part } from '@pictogrammers/element';
  
 import template from "./pageNotFound.html";
 import style from './pageNotFound.css';
 
-import { Icon } from '@mdi/components/mdi/shared/models/icon';
+import { Icon } from '@pictogrammers/components/pg/shared/models/icon';
 
 @Component({
   selector: 'site-page-not-found',

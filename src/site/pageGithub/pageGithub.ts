@@ -1,26 +1,26 @@
-import { Component, Prop, Part } from '@mdi/element';
+import { Component, Prop, Part } from '@pictogrammers/element';
  
 import template from "./pageGithub.html";
 import style from './pageGithub.css';
 
-import '@mdi/components/mdi/markdown';
-import MdiMarkdown from '@mdi/components/mdi/markdown';
-import '@mdi/components/mdi/icon';
-import MdiIcon from '@mdi/components/mdi/icon';
-import '@mdi/components/mdi/buttonToggle';
-import MdiButtonToggle from '@mdi/components/mdi/buttonToggle';
-import '@mdi/components/mdi/button';
-import MdiButton from '@mdi/components/mdi/button';
-import '@mdi/components/mdi/buttonLink';
-import MdiButtonLink from '@mdi/components/mdi/buttonLink';
-import '@mdi/components/mdi/buttonGroup';
-import MdiButtonGroup from '@mdi/components/mdi/buttonGroup';
-import '@mdi/components/mdi/inputText';
-import MdiInputText from '@mdi/components/mdi/inputText';
-import '@mdi/components/mdi/inputFileLocal';
-import MdiInputFileLocal from '@mdi/components/mdi/inputFileLocal';
-import { Icon } from '@mdi/components/mdi/shared/models/icon';
-import { addTooltip } from '@mdi/components/mdi/tooltip/addTooltip';
+import '@pictogrammers/components/pg/markdown';
+import MdiMarkdown from '@pictogrammers/components/pg/markdown';
+import '@pictogrammers/components/pg/icon';
+import MdiIcon from '@pictogrammers/components/pg/icon';
+import '@pictogrammers/components/pg/buttonToggle';
+import MdiButtonToggle from '@pictogrammers/components/pg/buttonToggle';
+import '@pictogrammers/components/pg/button';
+import MdiButton from '@pictogrammers/components/pg/button';
+import '@pictogrammers/components/pg/buttonLink';
+import MdiButtonLink from '@pictogrammers/components/pg/buttonLink';
+import '@pictogrammers/components/pg/buttonGroup';
+import MdiButtonGroup from '@pictogrammers/components/pg/buttonGroup';
+import '@pictogrammers/components/pg/inputText';
+import MdiInputText from '@pictogrammers/components/pg/inputText';
+import '@pictogrammers/components/pg/inputFileLocal';
+import MdiInputFileLocal from '@pictogrammers/components/pg/inputFileLocal';
+import { Icon } from '@pictogrammers/components/pg/shared/models/icon';
+import { addTooltip } from '@pictogrammers/components/pg/tooltip/addTooltip';
 import { getGitHubPreview } from './utils';
 
 const GITHUB_FILE = '/content/github.md';

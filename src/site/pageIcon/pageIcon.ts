@@ -1,25 +1,25 @@
-import { Component, Prop, Part } from '@mdi/element';
+import { Component, Prop, Part } from '@pictogrammers/element';
  
 import template from "./pageIcon.html";
 import style from './pageIcon.css';
 
-import { Icon } from '@mdi/components/mdi/shared/models/icon';
-import { http } from '@mdi/components/mdi/shared/http';
+import { Icon } from '@pictogrammers/components/pg/shared/models/icon';
+import { http } from '@pictogrammers/components/pg/shared/http';
 
-import '@mdi/components/mdi/markdown';
-import MdiMarkdown from '@mdi/components/mdi/markdown';
-import '@mdi/components/mdi/grid';
-import MdiGrid from '@mdi/components/mdi/grid';
-import '@mdi/components/mdi/preview';
-import MdiPreview from '@mdi/components/mdi/preview';
-import '@mdi/components/mdi/icon';
-import MdiIcon from '@mdi/components/mdi/icon';
-import '@mdi/components/mdi/button';
-import MdiButton from '@mdi/components/mdi/button';
-import '@mdi/components/mdi/avatar';
-import MdiAvatar from '@mdi/components/mdi/avatar';
-import { User } from '@mdi/components/mdi/shared/models/user';
-import { addTooltip } from '@mdi/components/mdi/tooltip/addTooltip';
+import '@pictogrammers/components/pg/markdown';
+import MdiMarkdown from '@pictogrammers/components/pg/markdown';
+import '@pictogrammers/components/pg/grid';
+import MdiGrid from '@pictogrammers/components/pg/grid';
+import '@pictogrammers/components/pg/preview';
+import MdiPreview from '@pictogrammers/components/pg/preview';
+import '@pictogrammers/components/pg/icon';
+import MdiIcon from '@pictogrammers/components/pg/icon';
+import '@pictogrammers/components/pg/button';
+import MdiButton from '@pictogrammers/components/pg/button';
+import '@pictogrammers/components/pg/avatar';
+import MdiAvatar from '@pictogrammers/components/pg/avatar';
+import { User } from '@pictogrammers/components/pg/shared/models/user';
+import { addTooltip } from '@pictogrammers/components/pg/tooltip/addTooltip';
 
 @Component({
   selector: 'site-page-icon',

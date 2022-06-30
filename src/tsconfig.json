@@ -12,15 +12,10 @@
     "outDir": "../dist/out-tsc",
     "sourceMap": true,
     "target": "es2015",
-    "typeRoots": [
-      "../node_modules/@types"
-    ]
-  },
-  "files": [
-    "main.ts",
-    "polyfills.ts"
-  ],
-  "include": [
-    "src/**/*.d.ts"
-  ]
+    "types": [
+      "node",
+      "jest",
+      "@pictogrammers/element-jest"
+    ],
+  }
 }
