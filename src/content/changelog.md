@@ -1,5 +1,90 @@
 # Changelog
 
+## Version 6.9.96
+
+- 100 New Icons
+- Updated
+  - `account-arrow-down-outline`
+  - `account-arrow-down`
+  - `account-arrow-left-outline`
+  - `account-arrow-left`
+  - `account-arrow-right-outline`
+  - `account-arrow-right`
+  - `account-arrow-up-outline`
+  - `account-arrow-up`
+  - `account-wrench-outline`
+  - `account-wrench`
+  - `bank-check`
+  - `bank-off-outline`
+  - `bank-off`
+  - `calendar-account-outline`
+  - `calendar-account`
+  - `calendar-alert`
+  - `calendar-blank-outline`
+  - `calendar-check-outline`
+  - `calendar-cursor`
+  - `calendar-export`
+  - `calendar-filter-outline`
+  - `calendar-heart`
+  - `calendar-import`
+  - `calendar-lock-outline`
+  - `calendar-lock`
+  - `calendar-month-outline`
+  - `calendar-outline`
+  - `calendar-range-outline`
+  - `calendar-remove-outline`
+  - `calendar-star-outline`
+  - `calendar-star`
+  - `calendar-text-outline`
+  - `calendar-today-outline`
+  - `calendar-week-begin-outline`
+  - `calendar-week-outline`
+  - `calendar-weekend-outline`
+  - `calendar-weekend`
+  - `email-check-outline`
+  - `email-check`
+  - `email-lock`
+  - `email-minus-outline`
+  - `email-minus`
+  - `email-plus-outline`
+  - `email-plus`
+  - `email-receive`
+  - `email-send-outline`
+  - `email-send`
+  - `file-gif-box`
+  - `file-jpg-box`
+  - `file-pdf-box`
+  - `file-png-box`
+  - `folder-check-outline`
+  - `folder-check`
+  - `folder-edit-outline`
+  - `folder-edit`
+  - `folder-music-outline`
+  - `folder-music`
+  - `folder-plus-outline`
+  - `folder-plus`
+  - `folder-remove-outline`
+  - `folder-remove`
+  - `image-minus`
+  - `image-plus`
+  - `minus-thick`
+  - `playlist-check`
+  - `playlist-edit`
+  - `playlist-minus`
+  - `playlist-play`
+  - `playlist-plus`
+  - `playlist-remove`
+  - `playlist-star`
+  - `toolbox-outline`
+  - `toolbox`
+  - `white-balance-sunny`
+
+## Version 6.8.96
+
+- 100 New Icons
+  - `monitor-speaker-off`
+  - `monitor-speaker`
+
 ## Version 6.7.96
 
 - 100 New Icons
