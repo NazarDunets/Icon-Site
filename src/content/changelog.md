@@ -2,7 +2,7 @@
 
 ## Version 6.9.96
 
-- 100 New Icons
+- [100 New Icons](https://pictogrammers.github.io/@mdi/font/6.9.96/)
 - Updated
   - `account-arrow-down-outline`
   - `account-arrow-down`
@@ -81,20 +81,20 @@
 
 ## Version 6.8.96
 
-- 100 New Icons
+- [100 New Icons](https://pictogrammers.github.io/@mdi/font/6.8.96/)
   - `monitor-speaker-off`
   - `monitor-speaker`
 
 ## Version 6.7.96
 
-- 100 New Icons
+- [100 New Icons](https://pictogrammers.github.io/@mdi/font/6.7.96/)
 - Updated
   - `church`
   - `stadium`
 
 ## Version 6.6.96
 
-- 100 New Icons
+- [101 New Icons](https://pictogrammers.github.io/@mdi/font/6.6.96/)
 - Updated
   - `barrel`
   - `bell-badge-outline`
@@ -154,11 +154,11 @@
 
 ## Version 6.5.95
 
-- 100 New Icons
+- [100 New Icons](https://pictogrammers.github.io/@mdi/font/6.5.95/)
 
 ## Version 6.4.95
 
-- 100 New Icons
+- [100 New Icons](https://pictogrammers.github.io/@mdi/font/6.4.95/)
 - Updated
   - `account-lock-outline`
   - `account-lock`
@@ -195,7 +195,7 @@
 
 ## Version 6.3.95
 
-- 100 New Icons
+- [100 New Icons](https://pictogrammers.github.io/@mdi/font/6.3.95/)
 - Updated
   - `account-key-outline`
   - `account-key`
@@ -222,7 +222,7 @@
 
 ## Version 6.2.95
 
-- 100 New Icons
+- [100 New Icons](https://pictogrammers.github.io/@mdi/font/6.2.95/)
 - Updated
   - `account-arrow-left-outline`
   - `account-arrow-left`
@@ -234,7 +234,7 @@
 
 ## Version 6.1.95
 
-- 281 New Icons
+- [281 New Icons](https://pictogrammers.github.io/@mdi/font/6.1.95/)
 - Read More: [#5409](https://github.com/Templarian/MaterialDesign/issues/5409)
 - Removed
   - `adobe-acrobat`
