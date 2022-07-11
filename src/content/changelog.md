@@ -2,7 +2,7 @@
 
 ## Version 7.0.96
 - [107 New Icons](https://pictogrammers.github.io/@mdi/font/7.0.96/)
-- Read More: (#6504](https://github.com/Templarian/MaterialDesign/issues/6504)
+- Read More: [#6504](https://github.com/Templarian/MaterialDesign/issues/6504)
 - The SVG `DOCTYPE` and `version` have been removed. See [#5934](https://github.com/Templarian/MaterialDesign/issues/5934).
 - Removed
   - `android-messages` - Use `message-text` instead.
