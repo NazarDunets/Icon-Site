@@ -1,5 +1,44 @@
 # Changelog
 
+## Version 7.0.96
+- [107 New Icons](https://pictogrammers.github.io/@mdi/font/7.0.96/)
+- Read More: (#6504](https://github.com/Templarian/MaterialDesign/issues/6504)
+- Removed
+  - `android-messages` - Use `message-text` instead.
+  - `book-variant-multiple` - Use `bookmark-box-multiple` instead.
+  - `desktop-mac` - Use `monitor` instead.
+  - `desktop-mac-dashboard` - Use `monitor-dashboard` instead.
+  - `discord`
+  - `google-home`
+  - `tablet-android` - Use `tablet` instead.
+- Renamed
+  - `diving-scuba` to `diving-scuba-mask`
+  - `email-send` to `email-arrow-right`
+  - `email-send-outline` to `email-arrow-right-outline`
+  - `email-receive` to `email-arrow-left`
+  - `email-receive-outline` to `email-arrow-left-outline`
+  - `format-textdirection-r-to-l` to `format-pilcrow-arrow-left`
+  - `format-textdirection-l-to-r` to `format-pilcrow-arrow-right`
+  - `globe-light` to `globe-light-outline`
+  - `google-controller` to `controller`
+  - `google-controller-off` to `controller-off`
+  - `lecturn` to `lectern
+  - `mosque` to `mosque-outline`
+  - `receipt` to `receipt-text`
+  - `receipt-outline` to `receipt-text-outline` (#2168 
+  - `silo` to `silo-outline`
+  - `text-to-speech` to `microphone-message`
+  - `text-to-speech-off` to `microphone-message-off`
+  - `timeline-help` to `timeline-question`
+  - `timeline-help-outline` to `timeline-question-outline`
+  - `vector-point` to `vector-point-select`
+- Updated
+  - `calendar-filter-outline`
+  - `calendar-filter`
+  - `comment-check-outline`
+  - `comment-check`
+  - `spray-bottle`
+
 ## Version 6.9.96
 
 - [100 New Icons](https://pictogrammers.github.io/@mdi/font/6.9.96/)
