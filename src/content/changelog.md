@@ -25,7 +25,7 @@
   - `lecturn` to `lectern
   - `mosque` to `mosque-outline`
   - `receipt` to `receipt-text`
-  - `receipt-outline` to `receipt-text-outline` (#2168 
+  - `receipt-outline` to `receipt-text-outline`
   - `silo` to `silo-outline`
   - `text-to-speech` to `microphone-message`
   - `text-to-speech-off` to `microphone-message-off`
