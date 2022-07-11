@@ -23,7 +23,7 @@
   - `globe-light` to `globe-light-outline`
   - `google-controller` to `controller`
   - `google-controller-off` to `controller-off`
-  - `lecturn` to `lectern
+  - `lecturn` to `lectern`
   - `mosque` to `mosque-outline`
   - `receipt` to `receipt-text`
   - `receipt-outline` to `receipt-text-outline`
