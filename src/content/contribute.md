@@ -27,7 +27,7 @@ A member of the team or another designer should eventually reply with a designed
 
 ### Contribute Icons
 
-You may want to contribute an icon that you made yourself, that's great! Just create an [issue](https://github.com/Templarian/MaterialDesign/issues) on GitHub and we'll take a look. Make sure you follow the [Material Design guidelines](https://material.io/guidelines/style/icons.html#icons-system-icons) so you will have to make little to no revisions and hopefully it'll get added to the set!
+You may want to contribute an icon that you made yourself, that's great! Just create an [issue](https://github.com/Templarian/MaterialDesign/issues) on GitHub and we'll take a look. Make sure you follow the [Material Design guidelines](https://material.io/design/iconography/system-icons.html#design-principles) so you will have to make little to no revisions and hopefully it'll get added to the set!
 
 If you need ideas for what to design you can always take a look at the currently open issues and reply with your design.
 
