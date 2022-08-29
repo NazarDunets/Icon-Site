@@ -21,7 +21,7 @@ npm install @mdi/js @jamescoyle/svelte-icon
 
 ```jsx
 <script>
-import SvgIcon from '@jamescoyle/vue-icon'
+import SvgIcon from '@jamescoyle/svelte-icon'
 import { mdiAccount } from '@mdi/js'
 </script>
 
